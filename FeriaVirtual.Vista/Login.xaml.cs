@@ -41,7 +41,7 @@ namespace FeriaVirtual.Vista
             }
             if (txt_contrasena.Password.Trim().Length == 0)
             {
-                string mensaje = "Debe ingresar una contraseña válida.";
+                string mensaje = "Contraseña inválida, favor corrobore datos de ingreso.";
                 string titulo = "Información";
                 MessageBoxButton tipo = MessageBoxButton.OK;
                 MessageBoxImage icono = MessageBoxImage.Information;
