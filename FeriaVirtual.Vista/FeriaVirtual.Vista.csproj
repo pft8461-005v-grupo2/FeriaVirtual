@@ -55,6 +55,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\AcuerdosPendientes.xaml.cs">
+      <DependentUpon>AcuerdosPendientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\DetalleAcuerdoPendiente.xaml.cs">
+      <DependentUpon>DetalleAcuerdoPendiente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\DetalleNuevosPedidos.xaml.cs">
+      <DependentUpon>DetalleNuevosPedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\GenerarSubastas.xaml.cs">
+      <DependentUpon>GenerarSubastas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\NuevosPedidos.xaml.cs">
+      <DependentUpon>NuevosPedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\ProcesoVentaInternacional.xaml.cs">
+      <DependentUpon>ProcesoVentaInternacional.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\VentaDespachar.xaml.cs">
+      <DependentUpon>VentaDespachar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Nacional\PedidoNacional.xaml.cs">
+      <DependentUpon>PedidoNacional.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml.cs">
+      <DependentUpon>ProcesoVentaNacional.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Usuario\CrearUsuario.xaml.cs">
+      <DependentUpon>CrearUsuario.xaml</DependentUpon>
+    </Compile>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +100,50 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Principal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\AcuerdosPendientes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\DetalleAcuerdoPendiente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\DetalleNuevosPedidos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\GenerarSubastas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\NuevosPedidos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\ProcesoVentaInternacional.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\VentaDespachar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Nacional\PedidoNacional.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Usuario\CrearUsuario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

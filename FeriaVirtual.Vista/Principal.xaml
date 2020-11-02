@@ -1,0 +1,72 @@
+﻿<Window x:Class="FeriaVirtual.Vista.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FeriaVirtual.Vista"
+        mc:Ignorable="d"
+        Title="Menu Principal" Height="450" Width="800">
+    <Grid>
+        <!--<Grid.RowDefinitions>
+
+            <RowDefinition Height="77" />
+            <RowDefinition Height="56" />
+            <RowDefinition Height="223" />
+
+        </Grid.RowDefinitions>-->
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="104"/>
+            <ColumnDefinition Width="52"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="148"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="Auto" MinWidth="323"/>
+
+        </Grid.ColumnDefinitions>
+        <Menu  x:Name="menu" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="6">
+            <MenuItem Header="Cuenta">
+                <MenuItem x:Name="btn_micuenta" Header="Mi información" Click="btn_micuenta_Click" Visibility="Collapsed" />
+                <MenuItem x:Name="btn_cerrarSesion" Header="Cerrar Sesión" Click="btn_cerrarSesion_Click"/>
+                <Separator />
+                <MenuItem x:Name="btn_cerrarAplicacion" Header="Cerrar" Click="btn_cerrarAplicacion_Click"/>
+            </MenuItem>
+            <MenuItem Header="Usuario">
+                <MenuItem x:Name="btn_menu_crear_usuario" Header="Registrar" Click="btnCrear_Usuario_Click"/>
+                <MenuItem x:Name="btn_menu_modificar_usuario" Header="Actualizar" Click="btn_menu_modificar_usuario_Click"/>
+                <MenuItem x:Name="btn_menu_activar_usuario" Header="Activar/Bloquear" Click="btn_menu_activar_usuario_Click"/>
+ 
+
+            </MenuItem>
+
+            <MenuItem Header="Rol">
+                <MenuItem x:Name="btn_menu_crear_rol" Header="Registrar" Click="btnCrear_rol_Click"/>
+                <MenuItem x:Name="btn_menu_modificar_rol" Header="Actualizar" Click="btn_menu_modificar_rol_Click"/>
+                <MenuItem x:Name="btn_menu_activar_rol" Header="Activar/Bloquear" Click="btn_menu_activar_rol_Click"/>
+
+            </MenuItem>
+            
+            <MenuItem Header="Procesos Venta ">
+                <MenuItem x:Name="btn_menu_ventaInternacional" Header="Internacional" Click="btn_menu_ventaInternacional_Click"/>
+                <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>
+
+            </MenuItem>
+
+            <MenuItem Header="Cliente ">
+                <MenuItem x:Name="btn_menu_registrar" Header="registrar" />
+                <MenuItem x:Name="btn_menu_buscar" Header="buscar" />
+
+            </MenuItem>
+        </Menu>
+        <Frame NavigationUIVisibility="Hidden" x:Name="frameAdm" Content="" HorizontalAlignment="Stretch" Height="391" VerticalAlignment="Top" Margin="0,18,0,0" Grid.ColumnSpan="6"/>
+        <!--<StatusBar  Height="35" Margin="0,374,8,0" VerticalAlignment="Top" Grid.ColumnSpan="5">
+            -->
+        <!--<StatusBarItem>
+                <TextBlock Name="lbl_barra" Padding="3px" />
+            </StatusBarItem>-->
+        <!--
+        </StatusBar>-->
+
+    </Grid>
+
+</Window>
