@@ -52,15 +52,9 @@ namespace FeriaVirtual.Vista
 
             if(UsuarioService.login(txt_nombre.Text.Trim(), txt_contrasena.Password.Trim()))
             {
-                string mensaje = "¡Conectado con el FeriaVirtual!";
-                string titulo = "Información";
-                MessageBoxButton tipo = MessageBoxButton.OK;
-                MessageBoxImage icono = MessageBoxImage.Information;
-                MessageBox.Show(mensaje, titulo, tipo, icono);
-                txt_nombre.Text = string.Empty;
-                txt_contrasena.Password = string.Empty;
-                txt_nombre.Focus();
-                return;
+                Principal principal = new Principal();
+                principal.Show();
+                this.Close();
             }
             else
             {
