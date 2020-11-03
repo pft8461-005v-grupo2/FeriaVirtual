@@ -36,7 +36,7 @@
 
         </DataGrid>
         <Button Content="Crear Transportista" Grid.Column="4" HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="110" Height="23" Click="btn_crearTransportista_Click"/>
-        <Button Content="Editar" Grid.Column="4" HorizontalAlignment="Left" Margin="100,130,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.338,0.392"/>
+        <Button Content="Editar" Grid.Column="4" HorizontalAlignment="Left" Margin="100,130,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.338,0.392" Click="btn_editarTransportista_Click"/>
         <Label Content="Transportista" Grid.Column="2" HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182" FontSize="18" FontWeight="Bold"/>
     </Grid>
 </Page>

@@ -37,7 +37,7 @@
 
         </DataGrid>
         <Button Content="Crear Productor" Grid.Column="4" HorizontalAlignment="Left" Margin="58,48,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="btn_crearProductor_Click"/>
-        <Button Content="Editar" Grid.Column="4" HorizontalAlignment="Left" Margin="100,130,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.338,0.392"/>
+        <Button Content="Editar" Grid.Column="4" HorizontalAlignment="Left" Margin="100,130,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.338,0.392" Click="btn_editarProductor_Click"/>
         <Label Content="Productor" Grid.Column="2" HorizontalAlignment="Left" Margin="47,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182" FontWeight="Bold" FontSize="18"/>
 
     </Grid>

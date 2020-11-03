@@ -35,5 +35,11 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
         {
 
         }
+
+        private void btn_editarTransportista_Click(object sender, RoutedEventArgs e)
+        {
+            EditarTransportista editarTransportista = new EditarTransportista();
+            editarTransportista.Show();
+        }
     }
 }

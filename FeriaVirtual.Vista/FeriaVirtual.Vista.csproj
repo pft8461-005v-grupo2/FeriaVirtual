@@ -70,6 +70,15 @@
     <Compile Include="Vistas\Mantenedor\CrearTransportista.xaml.cs">
       <DependentUpon>CrearTransportista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Mantenedor\EditarCliente.xaml.cs">
+      <DependentUpon>EditarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\EditarProductor.xaml.cs">
+      <DependentUpon>EditarProductor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\EditarTransportista.xaml.cs">
+      <DependentUpon>EditarTransportista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Mantenedor\Productor.xaml.cs">
       <DependentUpon>Productor.xaml</DependentUpon>
     </Compile>
@@ -132,6 +141,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Mantenedor\CrearTransportista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\EditarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\EditarProductor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\EditarTransportista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

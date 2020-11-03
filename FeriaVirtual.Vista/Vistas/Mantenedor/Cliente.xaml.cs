@@ -31,5 +31,12 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             CrearCliente crearCliente = new CrearCliente();
             crearCliente.Show();
         }
+
+        private void btn_edtitarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            EditarCliente editarCliente = new EditarCliente();
+            editarCliente.Show();
+        }
+
     }
 }
