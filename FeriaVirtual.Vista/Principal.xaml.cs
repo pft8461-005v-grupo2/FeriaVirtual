@@ -44,16 +44,16 @@ namespace FeriaVirtual.Vista
             Application.Current.Shutdown(-1);
         }
 
-        private void btnCrear_Usuario_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-            frameAdm.Content = new Vistas.Usuario.CrearUsuario();
-        }
+        //private void btnCrear_Usuario_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //(Application.Current as App).ResetSessionTimer();
+        //    frameAdm.Content = new Vistas.Usuario.CrearUsuario();
+        //}
 
-        private void btn_menu_modificar_usuario_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-        }
+        //private void btn_menu_modificar_usuario_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //(Application.Current as App).ResetSessionTimer();
+        //}
 
         private void btn_menu_activar_usuario_Click(object sender, RoutedEventArgs e)
         {
@@ -75,7 +75,7 @@ namespace FeriaVirtual.Vista
         private void btn_menu_ventanacional_Click(object sender, RoutedEventArgs e)
         {
             //(Application.Current as App).ResetSessionTimer();
-            frameAdm.Content = new Vistas.Procesos_venta.Nacional.ProcesoVentaNacional();
+             frameAdm.Content = new Vistas.Procesos_venta.Nacional.ProcesoVentaNacional();
         }
 
         private void btnCrear_rol_Click(object sender, RoutedEventArgs e)
@@ -92,6 +92,21 @@ namespace FeriaVirtual.Vista
         private void btn_menu_modificar_rol_Click(object sender, RoutedEventArgs e)
         {
             //(Application.Current as App).ResetSessionTimer();
+        }
+
+        private void btn_menu_cliente_Click(object sender, RoutedEventArgs e)
+        {
+            frameAdm.Content = new Vistas.Mantenedor.Cliente();
+        }
+
+        private void btn_menu_producto_Click(object sender, RoutedEventArgs e)
+        {
+            frameAdm.Content = new Vistas.Mantenedor.Productor();
+        }
+
+        private void btn_menu_transportista_Click(object sender, RoutedEventArgs e)
+        {
+            frameAdm.Content = new Vistas.Mantenedor.Transportista();
         }
 
         //private void btn_menu_activar_rol_Click(object sender, RoutedEventArgs e)

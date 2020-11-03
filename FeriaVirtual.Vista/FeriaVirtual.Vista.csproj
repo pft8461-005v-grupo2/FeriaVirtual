@@ -58,6 +58,24 @@
     <Compile Include="Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Mantenedor\Cliente.xaml.cs">
+      <DependentUpon>Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\CrearCliente.xaml.cs">
+      <DependentUpon>CrearCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\CrearProductor.xaml.cs">
+      <DependentUpon>CrearProductor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\CrearTransportista.xaml.cs">
+      <DependentUpon>CrearTransportista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\Productor.xaml.cs">
+      <DependentUpon>Productor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\Transportista.xaml.cs">
+      <DependentUpon>Transportista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Procesos venta\Internacional\AcuerdosPendientes.xaml.cs">
       <DependentUpon>AcuerdosPendientes.xaml</DependentUpon>
     </Compile>
@@ -85,9 +103,6 @@
     <Compile Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml.cs">
       <DependentUpon>ProcesoVentaNacional.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Usuario\CrearUsuario.xaml.cs">
-      <DependentUpon>CrearUsuario.xaml</DependentUpon>
-    </Compile>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -103,6 +118,30 @@
     <Page Include="Principal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Mantenedor\Cliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\CrearCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\CrearProductor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\CrearTransportista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\Productor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\Transportista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Procesos venta\Internacional\AcuerdosPendientes.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -137,10 +176,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Vistas\Usuario\CrearUsuario.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

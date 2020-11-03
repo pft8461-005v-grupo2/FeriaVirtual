@@ -13,25 +13,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FeriaVirtual.Vista.Vistas.Usuario
+namespace FeriaVirtual.Vista.Vistas.Mantenedor
 {
     /// <summary>
-    /// Lógica de interacción para CrearUsuario.xaml
+    /// Lógica de interacción para ransportista.xaml
     /// </summary>
-    public partial class CrearUsuario : Page
+    public partial class Transportista : Page
     {
-        public CrearUsuario()
+        public Transportista()
         {
             InitializeComponent();
         }
 
-
-        private void btn_guardar_usuario_Click(object sender, RoutedEventArgs e)
+        private void btn_crearTransportista_Click(object sender, RoutedEventArgs e)
         {
-
+            CrearTransportista crearTransportista = new CrearTransportista();
+            crearTransportista.Show();
         }
 
-        private void Txt_password(object sender, TextChangedEventArgs e)
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
