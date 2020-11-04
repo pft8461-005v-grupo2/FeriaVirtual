@@ -96,7 +96,7 @@ namespace FeriaVirtual.Vista
 
         private void btn_menu_cliente_Click(object sender, RoutedEventArgs e)
         {
-            frameAdm.Content = new Vistas.Mantenedor.Cliente();
+            frameAdm.Content = new Vistas.Mantenedor.VistaCliente();
         }
 
         private void btn_menu_producto_Click(object sender, RoutedEventArgs e)

@@ -66,9 +66,12 @@
   <ItemGroup>
     <Compile Include="Constants\Endpoints.cs" />
     <Compile Include="Constants\Parametros.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ResponseObject.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsuarioService.cs" />
+    <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
