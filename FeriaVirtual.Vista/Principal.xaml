@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FeriaVirtual.Vista"
         mc:Ignorable="d"
-        Title="Menu Principal" Height="450" Width="800">
+        Title="Menu Principal" Height="477.392" Width="820.141">
     <Grid>
         <!--<Grid.RowDefinitions>
 
@@ -31,41 +31,29 @@
                 <Separator />
                 <MenuItem x:Name="btn_cerrarAplicacion" Header="Cerrar" Click="btn_cerrarAplicacion_Click"/>
             </MenuItem>
-            <MenuItem Header="Usuario">
-                <MenuItem x:Name="btn_menu_crear_usuario" Header="Registrar" Click="btnCrear_Usuario_Click"/>
-                <MenuItem x:Name="btn_menu_modificar_usuario" Header="Actualizar" Click="btn_menu_modificar_usuario_Click"/>
-                <MenuItem x:Name="btn_menu_activar_usuario" Header="Activar/Bloquear" Click="btn_menu_activar_usuario_Click"/>
- 
+            <MenuItem Header="Mantenedor">
+                <MenuItem x:Name="btn_menu_cliente" Header="Cliente" Click="btn_menu_cliente_Click"/>
+                <MenuItem x:Name="btn_menu_producto" Header="Productor" Click="btn_menu_producto_Click"/>
+                <MenuItem x:Name="btn_menu_transportista" Header="Transportista" Click="btn_menu_transportista_Click"/>
+
 
             </MenuItem>
 
             <MenuItem Header="Rol">
                 <MenuItem x:Name="btn_menu_crear_rol" Header="Registrar" Click="btnCrear_rol_Click"/>
                 <MenuItem x:Name="btn_menu_modificar_rol" Header="Actualizar" Click="btn_menu_modificar_rol_Click"/>
-                <MenuItem x:Name="btn_menu_activar_rol" Header="Activar/Bloquear" Click="btn_menu_activar_rol_Click"/>
+               
 
             </MenuItem>
-            
+
             <MenuItem Header="Procesos Venta ">
                 <MenuItem x:Name="btn_menu_ventaInternacional" Header="Internacional" Click="btn_menu_ventaInternacional_Click"/>
                 <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>
-
             </MenuItem>
-
-            <MenuItem Header="Cliente ">
-                <MenuItem x:Name="btn_menu_registrar" Header="registrar" />
-                <MenuItem x:Name="btn_menu_buscar" Header="buscar" />
-
-            </MenuItem>
+            
         </Menu>
-        <Frame NavigationUIVisibility="Hidden" x:Name="frameAdm" Content="" HorizontalAlignment="Stretch" Height="391" VerticalAlignment="Top" Margin="0,18,0,0" Grid.ColumnSpan="6"/>
-        <!--<StatusBar  Height="35" Margin="0,374,8,0" VerticalAlignment="Top" Grid.ColumnSpan="5">
-            -->
-        <!--<StatusBarItem>
-                <TextBlock Name="lbl_barra" Padding="3px" />
-            </StatusBarItem>-->
-        <!--
-        </StatusBar>-->
+        <Frame NavigationUIVisibility="Hidden" x:Name="frameAdm" Content="" HorizontalAlignment="Stretch" Height="428" VerticalAlignment="Top" Margin="0,18,-14,0" Grid.ColumnSpan="6"/>
+
 
     </Grid>
 

@@ -10,30 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FeriaVirtual.Vista.Vistas.Usuario
+namespace FeriaVirtual.Vista.Vistas.Mantenedor
 {
     /// <summary>
-    /// Lógica de interacción para CrearUsuario.xaml
+    /// Lógica de interacción para EditarCliente.xaml
     /// </summary>
-    public partial class CrearUsuario : Page
+    public partial class EditarCliente : Window
     {
-        public CrearUsuario()
+        public EditarCliente()
         {
             InitializeComponent();
         }
 
-
-        private void btn_guardar_usuario_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Txt_password(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
     }
 }
