@@ -58,31 +58,31 @@
     <Compile Include="Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\Cliente.xaml.cs">
-      <DependentUpon>Cliente.xaml</DependentUpon>
+    <Compile Include="Vistas\Mantenedor\Cliente\VistaCliente.xaml.cs">
+      <DependentUpon>VistaCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\CrearCliente.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Cliente\CrearCliente.xaml.cs">
       <DependentUpon>CrearCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\CrearProductor.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Productor\CrearProductor.xaml.cs">
       <DependentUpon>CrearProductor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\CrearTransportista.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Transportista\CrearTransportista.xaml.cs">
       <DependentUpon>CrearTransportista.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\EditarCliente.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Cliente\EditarCliente.xaml.cs">
       <DependentUpon>EditarCliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\EditarProductor.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Productor\EditarProductor.xaml.cs">
       <DependentUpon>EditarProductor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\EditarTransportista.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Transportista\EditarTransportista.xaml.cs">
       <DependentUpon>EditarTransportista.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\Productor.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Productor\Productor.xaml.cs">
       <DependentUpon>Productor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\Transportista.xaml.cs">
+    <Compile Include="Vistas\Mantenedor\Transportista\Transportista.xaml.cs">
       <DependentUpon>Transportista.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Procesos venta\Internacional\AcuerdosPendientes.xaml.cs">
@@ -128,39 +128,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Vistas\Mantenedor\Cliente.xaml">
+    <Page Include="Vistas\Mantenedor\Cliente\VistaCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\CrearCliente.xaml">
+    <Page Include="Vistas\Mantenedor\Cliente\CrearCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\CrearProductor.xaml">
+    <Page Include="Vistas\Mantenedor\Productor\CrearProductor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\CrearTransportista.xaml">
+    <Page Include="Vistas\Mantenedor\Transportista\CrearTransportista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\EditarCliente.xaml">
+    <Page Include="Vistas\Mantenedor\Cliente\EditarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\EditarProductor.xaml">
+    <Page Include="Vistas\Mantenedor\Productor\EditarProductor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\EditarTransportista.xaml">
+    <Page Include="Vistas\Mantenedor\Transportista\EditarTransportista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\Productor.xaml">
+    <Page Include="Vistas\Mantenedor\Productor\Productor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\Transportista.xaml">
+    <Page Include="Vistas\Mantenedor\Transportista\Transportista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

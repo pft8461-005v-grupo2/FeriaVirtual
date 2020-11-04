@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FeriaVirtual.Negocio.Models;
 
 namespace FeriaVirtual.Negocio
 {
@@ -36,11 +37,34 @@ namespace FeriaVirtual.Negocio
 
         }
 
+        public static int crearUsuario(int rol_id, string correo, string contrasena)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.usuario_crear, Method.POST);
+
+            Usuario usuario = new Usuario();
+
+            usuario.rol_id = rol_id;
+            usuario.correo = correo;
+            usuario.contrasena = BCrypt.Net.BCrypt.HashPassword(contrasena);
+
+
+            string data = JsonConvert.SerializeObject(usuario);
+
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            ResponseObject response_object = JsonConvert.DeserializeObject<ResponseObject>(response.Content);
+
+            if (response_object != null)
+                if (response_object.OUT_ESTADO == 0)
+                    return response_object.OUT_ID_SALIDA;
+                else
+                    return -1;
+            else
+                return -1;
+
+        }
     }
 }
-    /*
-     * 
-   
-   var response = client.Execute(request);
-   Console.WriteLine(response.Content);
-    */

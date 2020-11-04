@@ -1,0 +1,50 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Mantenedor"
+      xmlns:Models="clr-namespace:FeriaVirtual.Negocio.Models;assembly=FeriaVirtual.Negocio" x:Class="FeriaVirtual.Vista.Vistas.Mantenedor.VistaCliente"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="Cliente" Height="470.141">
+
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="433*"/>
+        </Grid.RowDefinitions>-->
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="97"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="208"/>
+            <ColumnDefinition Width="152"/>
+            <ColumnDefinition Width="1068"/>
+
+
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Grid.ColumnSpan="3"/>
+        <Button Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="139,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Grid.ColumnSpan="2"/>
+        <DataGrid Name="data_clientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID" Width="50" />
+                <DataGridTextColumn Binding="{Binding Path=USUARIO_ID}" Header="Identificador" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=IDENTIFICADOR}" Header="Razon Social" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=RAZONSOCIAL}" Header="Direccion" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=DIRECCION}" Header="Direccion" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=CIUDAD}" Header="Ciudad" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=PAIS_ORIGEN}" Header="Pais Origen" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=TIPO_CLIENTE}" Header="Contraseña" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=CORREO}" Header="Correo" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=HABILITADO}" Header="Habilitado" Width="*" />
+                <DataGridTextColumn Binding="{Binding acciones}" Header="Acciones" Width="70" />
+            </DataGrid.Columns>
+
+  
+
+        </DataGrid>
+        <Button Content="Crear cliente" Grid.Column="4" HorizontalAlignment="Left" Margin="80,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_crearCliente_Click"/>
+        <Button Content="Editar" Grid.Column="4" HorizontalAlignment="Left" Margin="90,132,0,0" VerticalAlignment="Top" Width="55" Grid.Row="1" Height="20" Click="btn_edtitarCliente_Click"/>
+        <Label Content="Cliente" Grid.Column="2" HorizontalAlignment="Left" Margin="46,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182" FontWeight="Bold" FontSize="18" Height="34"/>
+    </Grid>
+</Page>
