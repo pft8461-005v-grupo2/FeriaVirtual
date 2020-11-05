@@ -1,4 +1,4 @@
-﻿<Page x:Class="FeriaVirtual.Vista.Vistas.Mantenedor.Productor"
+﻿<Page x:Class="FeriaVirtual.Vista.Vistas.Mantenedor.VistaProductor"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -22,17 +22,19 @@
         </Grid.ColumnDefinitions>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Grid.ColumnSpan="3"/>
         <Button Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="139,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Grid.ColumnSpan="2"/>
-        <DataGrid HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5">
+        <!--<DataGrid HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5">-->
+        <DataGrid Name="data_productores" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="50" />
-                <DataGridTextColumn Binding="{Binding Path=rut}" Header="Rut" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=razonSocial}" Header="Razon Social" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=direccion}" Header="Direccion" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=comuna}" Header="Comuna" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=correo}" Header="Correo" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=contraseña}" Header="Contraseña" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=habilitado}" Header="Habilitado" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=acciones}" Header="Acciones" Width="70" />
+                <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID" Width="50" />
+                <DataGridTextColumn Binding="{Binding Path=USUARIO_ID}" Header="Rut" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=CONTRATO_ID}" Header="Contrato id" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=RUT}" Header="Rut" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=RAZONSOCIAL}" Header="Razon social" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=DIRECCION}" Header="Direccion" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=COMUNA}" Header="Comuna" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=CORREO}" Header="Correo" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=HABILITADO}" Header="Habilitado" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=ACCION}" Header="Accion" Width="70" />
             </DataGrid.Columns>
 
         </DataGrid>
