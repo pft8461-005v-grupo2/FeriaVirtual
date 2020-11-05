@@ -20,6 +20,9 @@ namespace FeriaVirtual.Negocio.Constants
         // Crear
         public const string usuario_crear = "/usuario/crear";
         public const string cliente_crear = "/cliente/crear";
+        public const string Productor_crear = "/productor/crear";
+        public const string transportista_crear = "/transportista/crear";
+        
 
     }
 }

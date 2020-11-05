@@ -12,7 +12,7 @@ namespace FeriaVirtual.Negocio.Models
         public int usuario_id { get; set; }
         public int contrato_id { get; set; }
         public String rut { get; set; }
-        public String razonSocial { get; set; }
+        public String razonsocial { get; set; }
         public String direccion { get; set; }
         public String comuna { get; set; }
         public String correo { get; set; }

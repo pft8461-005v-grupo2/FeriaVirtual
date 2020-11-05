@@ -63,7 +63,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                     lista_obtenida[i].id,
                     lista_obtenida[i].usuario_id,
                     lista_obtenida[i].rut,
-                    lista_obtenida[i].razonSocial,
+                    lista_obtenida[i].razonsocial,
                     lista_obtenida[i].direccion,
                     lista_obtenida[i].comuna,
                     lista_obtenida[i].correo,

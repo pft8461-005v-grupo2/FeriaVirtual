@@ -32,21 +32,27 @@ namespace FeriaVirtual.Negocio.Services
             return lista_productor_response != null ? lista_productor_response : new List<Productor>(); ;
         }
 
-        //public static List<Cliente> consultarCliente()
-        //{
-        //    RestClient client = new RestClient(Endpoints.SERVER);
-        //    RestRequest request = new RestRequest(Endpoints.cliente_consultar, Method.POST);
+        public static int crearProductor(Productor productor)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.Productor_crear, Method.POST);
+
+            string data = JsonConvert.SerializeObject(productor);
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            ResponseObject response_object = JsonConvert.DeserializeObject<ResponseObject>(response.Content);
 
 
-        //    string data = JsonConvert.SerializeObject(new Cliente());
-        //    request.AddJsonBody(data);
+            if (response_object != null)
+                if (response_object.OUT_ESTADO == 0)
+                    return response_object.OUT_ID_SALIDA;
+                else
+                    return -1;
+            else
+                return -1;
 
-        //    IRestResponse response = client.Execute(request);
-
-        //    List<Cliente> lista_cliente_response = JsonConvert.DeserializeObject<List<Cliente>>(response.Content);
-
-
-        //    return lista_cliente_response != null ? lista_cliente_response : new List<Cliente>(); ;
-        //}
+        }
     }
 }
