@@ -11,7 +11,7 @@ using FeriaVirtual.Negocio.Models;
 
 namespace FeriaVirtual.Negocio
 {
-    public static class UsuarioService
+    public static class UsuarioService 
     {
 
         public static Boolean login(string correo, string contrasena)

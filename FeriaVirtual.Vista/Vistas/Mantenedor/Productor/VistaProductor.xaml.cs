@@ -1,6 +1,4 @@
-﻿using FeriaVirtual.Negocio.Models;
-using FeriaVirtual.Negocio.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -15,51 +13,53 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FeriaVirtual.Negocio.Models;
+using FeriaVirtual.Negocio.Services;
 
 namespace FeriaVirtual.Vista.Vistas.Mantenedor
 {
     /// <summary>
-    /// Lógica de interacción para Cliente.xaml
+    /// Lógica de interacción para Productor.xaml
     /// </summary>
-    public partial class VistaCliente : Page
+    public partial class VistaProductor : Page
     {
-        public VistaCliente()
+        public VistaProductor()
         {
             InitializeComponent();
-            actualizar_tabla_datos_cliente();
+            actualizar_tabla_datos_productor();
+        }
+
+       
+
+        private void btn_crearProductor_Click(object sender, RoutedEventArgs e)
+        {
+            CrearProductor crearProductor = new CrearProductor();
+            crearProductor.Show();
         }
 
 
-        private void btn_crearCliente_Click(object sender, RoutedEventArgs e)
+        private void btn_editarProductor_Click(object sender, RoutedEventArgs e)
         {
-            CrearCliente crearCliente = new CrearCliente();
-            crearCliente.Show();
+            EditarProductor editarProductor = new EditarProductor();
+            editarProductor.Show();
         }
 
-        private void btn_edtitarCliente_Click(object sender, RoutedEventArgs e)
+        public void actualizar_tabla_datos_productor()
         {
-            EditarCliente editarCliente = new EditarCliente();
-            editarCliente.Show();
-        }
-
-
-        public void actualizar_tabla_datos_cliente()
-        {
-            List<Cliente> lista_obtenida =  ClienteService.consultarCliente();
+            List<Productor> lista_obtenida = ProductorService.consultarProductor();
 
 
             DataTable tabla_con_datos = new DataTable();
             //int c = 0;
 
-            tabla_con_datos.TableName = "Lista de clientes";
+            tabla_con_datos.TableName = "Lista de Productores";
             tabla_con_datos.Columns.Add("ID");
             tabla_con_datos.Columns.Add("USUARIO_ID");
-            tabla_con_datos.Columns.Add("IDENTIFICADOR");
+            tabla_con_datos.Columns.Add("CONTRATO_ID");
+            tabla_con_datos.Columns.Add("RUT");
             tabla_con_datos.Columns.Add("RAZONSOCIAL");
             tabla_con_datos.Columns.Add("DIRECCION");
-            tabla_con_datos.Columns.Add("CIUDAD");
-            tabla_con_datos.Columns.Add("PAIS_ORIGEN");
-            tabla_con_datos.Columns.Add("TIPO_CLIENTE");
+            tabla_con_datos.Columns.Add("COMUNA");
             tabla_con_datos.Columns.Add("CORREO");
             tabla_con_datos.Columns.Add("HABILITADO");
             tabla_con_datos.Columns.Add("ACCION");
@@ -71,27 +71,22 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
                     lista_obtenida[i].id,
                     lista_obtenida[i].usuario_id,
-                    lista_obtenida[i].identificador,
-                    lista_obtenida[i].razonSocial,
+                    lista_obtenida[i].contrato_id,
+                    lista_obtenida[i].rut,
+                    lista_obtenida[i].razonsocial,
                     lista_obtenida[i].direccion,
-                    lista_obtenida[i].ciudad,
-                    lista_obtenida[i].pais_origen,
-                    lista_obtenida[i].tipo_cliente,
+                    lista_obtenida[i].comuna,
                     lista_obtenida[i].correo,
                     lista_obtenida[i].habilitado
+
                     );
             }
 
 
+            data_productores.ItemsSource = tabla_con_datos.AsDataView();
 
-
-
-
-            data_clientes.ItemsSource = tabla_con_datos.AsDataView();
-           
 
 
         }
-
     }
 }

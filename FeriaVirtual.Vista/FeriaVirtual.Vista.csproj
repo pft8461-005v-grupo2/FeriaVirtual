@@ -79,11 +79,11 @@
     <Compile Include="Vistas\Mantenedor\Transportista\EditarTransportista.xaml.cs">
       <DependentUpon>EditarTransportista.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\Productor\Productor.xaml.cs">
-      <DependentUpon>Productor.xaml</DependentUpon>
+    <Compile Include="Vistas\Mantenedor\Productor\VistaProductor.xaml.cs">
+      <DependentUpon>VistaProductor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Mantenedor\Transportista\Transportista.xaml.cs">
-      <DependentUpon>Transportista.xaml</DependentUpon>
+    <Compile Include="Vistas\Mantenedor\Transportista\VistaTransportista.xaml.cs">
+      <DependentUpon>VistaTransportista.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Procesos venta\Internacional\AcuerdosPendientes.xaml.cs">
       <DependentUpon>AcuerdosPendientes.xaml</DependentUpon>
@@ -156,11 +156,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\Productor\Productor.xaml">
+    <Page Include="Vistas\Mantenedor\Productor\VistaProductor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Mantenedor\Transportista\Transportista.xaml">
+    <Page Include="Vistas\Mantenedor\Transportista\VistaTransportista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
