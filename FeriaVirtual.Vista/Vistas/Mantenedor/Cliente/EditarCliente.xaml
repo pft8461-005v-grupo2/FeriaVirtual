@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Mantenedor"
         mc:Ignorable="d"
-        Title="EditarCliente" Height="450" Width="487.681">
+        Title="EditarCliente" Height="500" Width="487.681">
 
     <Grid Margin="10,0,2,0">
         <Grid.RowDefinitions>
@@ -19,27 +19,32 @@
 
 
         </Grid.ColumnDefinitions>
-        <Label Content="Identificador" HorizontalAlignment="Left" Margin="26,69,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26"/>
-        <Label Content="Editar Cliente" HorizontalAlignment="Left" Margin="49,10,0,0" VerticalAlignment="Top" Width="138" Height="35" FontSize="18" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="26,65,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26"/>
-        <Label Content="Correo" HorizontalAlignment="Left" Margin="26,34,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26"/>
-        <Label Content="Tipo Cliente" HorizontalAlignment="Left" Margin="26,3,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26"/>
-        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="26,162,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26"/>
-        <Label Content="País Origen" HorizontalAlignment="Left" Margin="26,193,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26"/>
-        <Label Content="Direccion" HorizontalAlignment="Left" Margin="26,131,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26"/>
-        <Label Content="Razón social" HorizontalAlignment="Left" Margin="26,100,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26"/>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="60,3,0,0" VerticalAlignment="Top" Width="127" Height="26" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="60,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="60,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="60,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="60,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="60,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="60,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="60,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2"/>
-        <Button Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" Margin="149,127,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Height="20"/>
-        <Button Content="Cancelar" Grid.Column="2" HorizontalAlignment="Right" Margin="0,127,67,0" Grid.Row="1" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.246,0.312" Height="20"/>
-        <Label Content="Habilitado" HorizontalAlignment="Left" Margin="26,96,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26"/>
-        <RadioButton Content="Habilitar" Grid.Column="1" HorizontalAlignment="Left" Margin="60,102,0,0" Grid.Row="1" VerticalAlignment="Top" Height="15" Width="64" />
-        <RadioButton Content="Deshabilitar" Grid.Column="1" HorizontalAlignment="Left" Margin="149,102,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="15" Width="82"/>
+        <Label Content="Identificador" HorizontalAlignment="Left" Margin="39,122,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26" IsEnabled="False"/>
+        <Label Content="Editar Cliente" HorizontalAlignment="Left" Margin="73,10,0,0" VerticalAlignment="Top" Width="138" Height="35" FontSize="18" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="39,91,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26" IsEnabled="False"/>
+        <Label Content="Correo" HorizontalAlignment="Left" Margin="39,60,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26" IsEnabled="False"/>
+        <Label Content="Tipo Cliente" HorizontalAlignment="Left" Margin="39,29,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26" IsEnabled="False"/>
+        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="39,215,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26" IsEnabled="False"/>
+        <Label Content="País Origen" HorizontalAlignment="Left" Margin="39,246,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26" IsEnabled="False" Grid.RowSpan="2"/>
+        <Label Content="Direccion" HorizontalAlignment="Left" Margin="39,184,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26" IsEnabled="False"/>
+        <Label Content="Razón social" HorizontalAlignment="Left" Margin="39,153,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Height="26" IsEnabled="False"/>
+        <ComboBox Name="cbx_tipo_cliente" Grid.Column="1" HorizontalAlignment="Left" Margin="73,29,0,0" VerticalAlignment="Top" Width="256" Height="26" Grid.Row="1" Grid.ColumnSpan="2" IsEnabled="False"
+                  SelectedValuePath="Key" DisplayMemberPath="Value"
+			SelectedValue="{Binding Path=Tipo_Cliente}" />
+        <TextBox Name="tb_identificador" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="73,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <TextBox Name="tb_contrasena" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="73,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" Grid.Row="1" IsEnabled="False"/>
+        <TextBox Name="tb_correo" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="73,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" Grid.Row="1" IsEnabled="False"/>
+        <TextBox Name="tb_pais_origen" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="73,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" Grid.RowSpan="2" IsEnabled="False"/>
+        <TextBox Name="tb_ciudad" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="73,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <TextBox Name="tb_razonsocial" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="73,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <TextBox Name="tb_direccion" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="73,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <Button Name="btn_guardar" Content="Guardar" Grid.Column="1" HorizontalAlignment="Left" Margin="162,180,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Height="20" IsEnabled="False" Click="btn_guardar_Click"/>
+        <Button Name="btn_cancelar" Content="Cancelar" Grid.Column="2" HorizontalAlignment="Right" Margin="0,180,54,0" Grid.Row="1" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.246,0.312" Height="20" Click="btn_cancelar_Click"/>
+        <Label Content="Habilitado" HorizontalAlignment="Left" Margin="39,122,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Grid.Row="1" Height="26" IsEnabled="False"/>
+        <RadioButton Name="check_habilitar" Content="Habilitar" Grid.Column="1" HorizontalAlignment="Left" Margin="73,128,0,0" Grid.Row="1" VerticalAlignment="Top" Height="15" Width="64" IsEnabled="False" />
+        <RadioButton Name="check_deshabilitar" Content="Deshabilitar" Grid.Column="1" HorizontalAlignment="Left" Margin="162,128,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="15" Width="82" IsEnabled="False"/>
+        <Label Content="Ingrese correo:" HorizontalAlignment="Left" Margin="39,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,-0.462" Grid.ColumnSpan="2" Width="170"/>
+        <TextBox Name="txt_buscar_correo" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="73,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="188"/>
+        <Button Name="btn_buscar_cliente" Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="91,66,0,0" VerticalAlignment="Top" Width="63" Click="btn_buscar_cliente_Click"/>
     </Grid>
 </Window>

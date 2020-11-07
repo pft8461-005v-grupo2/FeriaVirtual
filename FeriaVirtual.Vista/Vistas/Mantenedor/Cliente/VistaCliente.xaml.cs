@@ -62,11 +62,15 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             tabla_con_datos.Columns.Add("TIPO_CLIENTE");
             tabla_con_datos.Columns.Add("CORREO");
             tabla_con_datos.Columns.Add("HABILITADO");
-            tabla_con_datos.Columns.Add("ACCION");
 
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
+
+                Button boton = new Button();
+                boton.Content = "Editar";
+               
+
                 tabla_con_datos.Rows.Add(
 
                     lista_obtenida[i].id,

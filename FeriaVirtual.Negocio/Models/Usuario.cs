@@ -12,6 +12,6 @@ namespace FeriaVirtual.Negocio
         public int rol_id { get; set; }
         public string correo { get; set; }
         public string contrasena { get; set; }
-        public char habilitado { get; set; }
+        public int habilitado { get; set; }
     }
 }

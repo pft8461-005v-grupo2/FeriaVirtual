@@ -8,7 +8,7 @@ namespace FeriaVirtual.Negocio.Constants
 {
     class Endpoints
     {
-        public const string SERVER = "http://localhost:8090/api";
+        public const string SERVER = "http://192.168.100.4:8080/api";
 
         // Consultar
         public const string usuario_consultar = "/usuario/consultar";
@@ -22,6 +22,9 @@ namespace FeriaVirtual.Negocio.Constants
         public const string cliente_crear = "/cliente/crear";
         public const string Productor_crear = "/productor/crear";
         public const string transportista_crear = "/transportista/crear";
+
+        // Actualizar
+        public const string cliente_actualizar = "/cliente/actualizar";
         
 
     }

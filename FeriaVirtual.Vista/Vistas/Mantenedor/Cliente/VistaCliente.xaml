@@ -34,17 +34,13 @@
                 <DataGridTextColumn Binding="{Binding Path=DIRECCION}" Header="Direccion" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=CIUDAD}" Header="Ciudad" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=PAIS_ORIGEN}" Header="Pais Origen" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=TIPO_CLIENTE}" Header="Contraseña" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=TIPO_CLIENTE}" Header="Tipo Cliente" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=CORREO}" Header="Correo" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=HABILITADO}" Header="Habilitado" Width="*" />
-                <DataGridTextColumn Binding="{Binding acciones}" Header="Acciones" Width="70" />
             </DataGrid.Columns>
-
-  
-
         </DataGrid>
-        <Button Content="Crear cliente" Grid.Column="4" HorizontalAlignment="Left" Margin="80,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_crearCliente_Click"/>
-        <Button Content="Editar" Grid.Column="4" HorizontalAlignment="Left" Margin="90,132,0,0" VerticalAlignment="Top" Width="55" Grid.Row="1" Height="20" Click="btn_edtitarCliente_Click"/>
+        <Button Content="Crear" Grid.Column="3" HorizontalAlignment="Left" Margin="144,48,0,0" VerticalAlignment="Top" Width="85" Height="23" Click="btn_crearCliente_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Modificar" Grid.Column="4" HorizontalAlignment="Left" Margin="82,48,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btn_edtitarCliente_Click"/>
         <Label Content="Cliente" Grid.Column="2" HorizontalAlignment="Left" Margin="46,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182" FontWeight="Bold" FontSize="18" Height="34"/>
     </Grid>
 </Page>
