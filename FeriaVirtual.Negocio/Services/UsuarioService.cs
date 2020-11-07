@@ -11,7 +11,7 @@ using FeriaVirtual.Negocio.Models;
 
 namespace FeriaVirtual.Negocio
 {
-    public static class UsuarioService 
+    public static class UsuarioService
     {
 
         public static Boolean login(string correo, string contrasena)
@@ -29,7 +29,7 @@ namespace FeriaVirtual.Negocio
             List<Usuario> lista_response = JsonConvert.DeserializeObject<List<Usuario>>(response.Content);
 
 
-            foreach(Usuario aux in lista_response){
+            foreach (Usuario aux in lista_response) {
                 usuario = aux;
             }
 
@@ -66,5 +66,52 @@ namespace FeriaVirtual.Negocio
                 return -1;
 
         }
+
+
+        public static int actualizarUsuario(Usuario usuario)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.usuario_crear, Method.POST);
+
+            if(usuario.contrasena != null)
+                usuario.contrasena = BCrypt.Net.BCrypt.HashPassword(usuario.contrasena);
+
+
+            string data = JsonConvert.SerializeObject(usuario);
+
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            ResponseObject response_object = JsonConvert.DeserializeObject<ResponseObject>(response.Content);
+
+            if (response_object != null)
+                if (response_object.OUT_ESTADO == 0)
+                    return response_object.OUT_ID_SALIDA;
+                else
+                    return -1;
+            else
+                return -1;
+
+        }
+
+
+        public static List<Usuario> consultarUsuario(Usuario usuario)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.usuario_consultar, Method.POST);
+
+
+            string data = JsonConvert.SerializeObject(usuario);
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            List<Usuario> lista_usuario_response = JsonConvert.DeserializeObject<List<Usuario>>(response.Content);
+
+
+            return lista_usuario_response != null ? lista_usuario_response : new List<Usuario>(); ;
+        }
+
     }
 }
