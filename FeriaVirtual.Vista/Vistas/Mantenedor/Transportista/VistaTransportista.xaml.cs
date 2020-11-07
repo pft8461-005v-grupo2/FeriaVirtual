@@ -53,7 +53,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             tabla_con_datos.Columns.Add("comuna");
             tabla_con_datos.Columns.Add("correo");
             tabla_con_datos.Columns.Add("habilitado");
-            tabla_con_datos.Columns.Add("accion");
+            //tabla_con_datos.Columns.Add("accion");
 
 
             for (int i = 0; i < lista_obtenida.Count; i++)
@@ -88,6 +88,9 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             editarTransportista.Show();
         }
 
-       
+        private void Btn_refrescar_Click(object sender, RoutedEventArgs e)
+        {
+            actualizar_tabla_datos_transportista();
+        }
     }
 }

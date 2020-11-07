@@ -97,5 +97,11 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
         }
 
+        private void btn_refrescar_Click(object sender, RoutedEventArgs e)
+        {
+
+            actualizar_tabla_datos_cliente();
+
+        }
     }
 }

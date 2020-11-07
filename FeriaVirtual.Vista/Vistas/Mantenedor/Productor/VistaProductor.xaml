@@ -26,21 +26,22 @@
         <DataGrid Name="data_productores" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID" Width="50" />
-                <DataGridTextColumn Binding="{Binding Path=USUARIO_ID}" Header="Rut" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=CONTRATO_ID}" Header="Contrato id" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=USUARIO_ID}" Header="Usuario ID" Width="*" />
+                <!--<DataGridTextColumn Binding="{Binding Path=CONTRATO_ID}" Header="Contrato id" Width="*" />-->
                 <DataGridTextColumn Binding="{Binding Path=RUT}" Header="Rut" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=RAZONSOCIAL}" Header="Razon social" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=DIRECCION}" Header="Direccion" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=COMUNA}" Header="Comuna" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=CORREO}" Header="Correo" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=HABILITADO}" Header="Habilitado" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=ACCION}" Header="Accion" Width="70" />
+                <!--<DataGridTextColumn Binding="{Binding Path=ACCION}" Header="Accion" Width="70" />-->
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button Content="Crear Productor" Grid.Column="4" HorizontalAlignment="Left" Margin="58,48,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="btn_crearProductor_Click"/>
-        <Button Content="Editar" Grid.Column="4" HorizontalAlignment="Left" Margin="100,130,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.338,0.392" Click="btn_editarProductor_Click"/>
+        <Button Content="Crear" Grid.Column="4" HorizontalAlignment="Left" Margin="0,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_crearProductor_Click"/>
+        <Button Content="Modificar" Grid.Column="4" HorizontalAlignment="Left" Margin="83,48,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.338,0.392" Click="btn_editarProductor_Click" Height="23"/>
         <Label Content="Productor" Grid.Column="2" HorizontalAlignment="Left" Margin="47,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182" FontWeight="Bold" FontSize="18"/>
+        <Button Content="Refrescar" Grid.Column="3" HorizontalAlignment="Left" Margin="72,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Btn_refrescar_Click"/>
 
     </Grid>
 </Page>
