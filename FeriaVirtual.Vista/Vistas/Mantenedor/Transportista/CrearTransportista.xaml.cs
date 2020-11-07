@@ -67,7 +67,11 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
         }
 
+ 
 
-
+        private void Btn_cerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -55,14 +55,14 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             tabla_con_datos.TableName = "Lista de Productores";
             tabla_con_datos.Columns.Add("ID");
             tabla_con_datos.Columns.Add("USUARIO_ID");
-            tabla_con_datos.Columns.Add("CONTRATO_ID");
+            //tabla_con_datos.Columns.Add("CONTRATO_ID");
             tabla_con_datos.Columns.Add("RUT");
             tabla_con_datos.Columns.Add("RAZONSOCIAL");
             tabla_con_datos.Columns.Add("DIRECCION");
             tabla_con_datos.Columns.Add("COMUNA");
             tabla_con_datos.Columns.Add("CORREO");
             tabla_con_datos.Columns.Add("HABILITADO");
-            tabla_con_datos.Columns.Add("ACCION");
+            //tabla_con_datos.Columns.Add("ACCION");
 
 
             for (int i = 0; i < lista_obtenida.Count; i++)
@@ -71,7 +71,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
                     lista_obtenida[i].id,
                     lista_obtenida[i].usuario_id,
-                    lista_obtenida[i].contrato_id,
+                    //lista_obtenida[i].contrato_id,
                     lista_obtenida[i].rut,
                     lista_obtenida[i].razonsocial,
                     lista_obtenida[i].direccion,
@@ -87,6 +87,13 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
 
 
+        }
+
+     
+
+        private void Btn_refrescar_Click(object sender, RoutedEventArgs e)
+        {
+            actualizar_tabla_datos_productor();
         }
     }
 }
