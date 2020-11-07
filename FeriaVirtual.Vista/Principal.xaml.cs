@@ -101,12 +101,12 @@ namespace FeriaVirtual.Vista
 
         private void btn_menu_producto_Click(object sender, RoutedEventArgs e)
         {
-            frameAdm.Content = new Vistas.Mantenedor.Productor();
+            frameAdm.Content = new Vistas.Mantenedor.VistaProductor();
         }
 
         private void btn_menu_transportista_Click(object sender, RoutedEventArgs e)
         {
-            frameAdm.Content = new Vistas.Mantenedor.Transportista();
+            frameAdm.Content = new Vistas.Mantenedor.VistaTransportista();
         }
 
         //private void btn_menu_activar_rol_Click(object sender, RoutedEventArgs e)
