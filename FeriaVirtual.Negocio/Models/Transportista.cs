@@ -15,7 +15,7 @@ namespace FeriaVirtual.Negocio.Models
         public String direccion { get; set; }
         public String comuna { get; set; }
         public String correo { get; set; }
-        public char habilitado { get; set; }
+        public int habilitado { get; set; }
         
     }
 }

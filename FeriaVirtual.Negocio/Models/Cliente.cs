@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace FeriaVirtual.Negocio.Models
 {
@@ -17,6 +18,7 @@ namespace FeriaVirtual.Negocio.Models
         public string pais_origen { get; set; }
         public int tipo_cliente { get; set; }
         public string correo { get; set; }
-        public char habilitado { get; set; }
+        public int habilitado { get; set; }
+
     }
 }
