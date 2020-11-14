@@ -25,7 +25,7 @@ namespace FeriaVirtual.Negocio.Constants
 
         // Actualizar
         public const string cliente_actualizar = "/cliente/actualizar";
-        
-
+        public const string productor_actualizar = "/productor/actualizar";
+        public const string transportista_actualizar = "/transportista/actualizar";
     }
 }
