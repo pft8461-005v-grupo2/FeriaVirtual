@@ -39,16 +39,15 @@
 
             </MenuItem>
 
-            <MenuItem Header="Rol">
-                <MenuItem x:Name="btn_menu_crear_rol" Header="Registrar" Click="btnCrear_rol_Click"/>
-                <MenuItem x:Name="btn_menu_modificar_rol" Header="Actualizar" Click="btn_menu_modificar_rol_Click"/>
-               
-
-            </MenuItem>
-
             <MenuItem Header="Procesos Venta ">
-                <MenuItem x:Name="btn_menu_ventaInternacional" Header="Internacional" Click="btn_menu_ventaInternacional_Click"/>
-                <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>
+                <MenuItem x:Name="btn_menu_ventaInternacional" Header="Internacional" Click="btn_menu_ventaInternacional_Click">
+                    <MenuItem x:Name="btn_menu_administrarProcesos" Header="Administrar Procesos"/>
+                    <MenuItem x:Name="btn_menu_nuevosPendientes" Header="Nuevos Pedidos"/>
+                    <MenuItem x:Name="btn_menu_acuerdosPendientes" Header="Acuerdos"/>
+                    <MenuItem x:Name="btn_menu_subastasPendientes" Header="Subastas"/>
+                    <MenuItem x:Name="btn_menu_despachosPendientes" Header="Despachos"/>
+                </MenuItem>
+            <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>
             </MenuItem>
             
         </Menu>
