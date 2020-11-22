@@ -1,11 +1,12 @@
-﻿<Window x:Class="FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional.NuevosPedidos"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional"
-        mc:Ignorable="d"
-        Title="NuevosPedidos" Height="450" Width="800">
+﻿<Page x:Class="FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional.NuevosPedidos"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NuevosPedidos">
     <Grid>
         <Grid.ColumnDefinitions>
 
@@ -17,7 +18,7 @@
 
 
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" Margin="0,0,0,-10" SelectionChanged="DataGrid_SelectionChanged">
+        <!--<DataGrid HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" Margin="0,0,0,-10" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=descripcion}" Header="Descripcíon" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=cantidad}" Header="Cantidad" Width="*" />
@@ -25,9 +26,28 @@
                 <DataGridTextColumn Binding="{Binding Path=fecha}" Header="Fecha" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=acciones}" Header="Acciones" Width="*" />
             </DataGrid.Columns>
+            
+            
+        </DataGrid>-->
+
+        <DataGrid Name="data_NuevoPedidos" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="413" Margin="0,37,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=id}" Header="Id" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=cliente_id}" Header="Cliente id" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=fechacreacion}" Header="Fecha creacion" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=producto}" Header="Producto " Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=kilogramos}" Header="Kilogramos " Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=habilitado}" Header="Habilitado " Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=Acciones}" Header="Acciones " Width="*" />
+            </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Ver Detalle" Grid.Column="4" HorizontalAlignment="Left" Margin="22,32,0,0" VerticalAlignment="Top" Width="75" Click="btn_ver_detalle_Click"/>
+
+
+
+        <Button Content="Ver Detalle" Grid.Column="4" HorizontalAlignment="Left" Margin="54,67,0,0" VerticalAlignment="Top" Width="75" Click="btn_ver_detalle_Click"/>
+        <Label Content="Nuevos Pedidos" Grid.Column="2" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="161" FontSize="18" Grid.ColumnSpan="2"/>
 
 
     </Grid>
-</Window>
+
+</Page>

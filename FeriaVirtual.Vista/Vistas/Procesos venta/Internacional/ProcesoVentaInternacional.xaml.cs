@@ -26,17 +26,17 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             InitializeComponent();
         }
 
-        private void Btn_ver_detalle_pedidos_Click(object sender, RoutedEventArgs e)
-        {  
-            NuevosPedidos nuevop = new NuevosPedidos();
-            nuevop.Show(); 
-        }
+        //private void Btn_ver_detalle_pedidos_Click(object sender, RoutedEventArgs e)
+        //{  
+        //    NuevosPedidos nuevop = new NuevosPedidos();
+        //    nuevop.Show(); 
+        //}
 
-        private void Btn_ver_acuedorPendientes_Click(object sender, RoutedEventArgs e)
-        {
-            AcuerdosPendientes acuerdosPendientes = new AcuerdosPendientes();
-            acuerdosPendientes.Show();
-        }
+        //private void Btn_ver_acuedorPendientes_Click(object sender, RoutedEventArgs e)
+        //{
+        //    AcuerdosPendientes acuerdosPendientes = new AcuerdosPendientes();
+        //    acuerdosPendientes.Show();
+        //}
 
         private void Btn_ver_subasta_Click(object sender, RoutedEventArgs e)
         {
