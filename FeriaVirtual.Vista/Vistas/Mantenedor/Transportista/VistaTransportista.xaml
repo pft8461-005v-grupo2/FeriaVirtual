@@ -24,8 +24,8 @@
         <!--<DataGrid Name="data_transportista" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" >-->
         <DataGrid Name="data_transportista" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="50" />
-                <DataGridTextColumn Binding="{Binding Path=usuario_id}" Header="usuario id" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="50" Visibility="Collapsed" />
+                <DataGridTextColumn Binding="{Binding Path=usuario_id}" Header="usuario id" Width="*" Visibility="Collapsed" />
                 <DataGridTextColumn Binding="{Binding Path=rut}" Header="Rut" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=razonSocial}" Header="Razon Social" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=direccion}" Header="Direccion" Width="*" />

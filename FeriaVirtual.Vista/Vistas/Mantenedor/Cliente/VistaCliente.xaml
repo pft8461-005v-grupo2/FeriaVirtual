@@ -27,8 +27,8 @@
         <Button Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="139,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Grid.ColumnSpan="2"/>
         <DataGrid Name="data_clientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID" Width="50" />
-                <DataGridTextColumn Binding="{Binding Path=USUARIO_ID}" Header="Usuario ID" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID" Width="50" Visibility="Collapsed" />
+                <DataGridTextColumn Binding="{Binding Path=USUARIO_ID}" Header="Usuario ID" Width="*" Visibility="Collapsed" />
                 <DataGridTextColumn Binding="{Binding Path=IDENTIFICADOR}" Header="Identificador" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=RAZONSOCIAL}" Header="Razon social" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=DIRECCION}" Header="Direccion" Width="*" />
