@@ -20,15 +20,7 @@
 
         </Grid.ColumnDefinitions>
 
-        <!--<DataGrid Height="395" VerticalAlignment="Top"  Grid.ColumnSpan="5" Margin="0,55,708,0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=descripcion}" Header="Descripcíon" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=cantidad}" Header="Cantidad" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=fecha}" Header="Fecha" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=valor}" Header="Valor" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=acciones}" Header="Accion" Width="*" />
-            </DataGrid.Columns>
-        </DataGrid>-->
+        
         <Label Content="Acuerdos Pendientes" Grid.Column="1" HorizontalAlignment="Left" Margin="140,3,0,0" VerticalAlignment="Top" Width="183" FontSize="18" Grid.ColumnSpan="3"/>
 
         <DataGrid Name="data_AcuerdosPendientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="413" Margin="0,37,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
