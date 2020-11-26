@@ -34,17 +34,22 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=id}" Header="Id" Width="*" Visibility="Collapsed" />
                 <DataGridTextColumn Binding="{Binding Path=cliente_id}" Header="Cliente id" Width="*" Visibility="Collapsed" />
+                <DataGridTextColumn Binding="{Binding Path=identificador}" Header="Identificador" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=razonsocial}" Header="Razón Social" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=fechacreacion}" Header="Fecha creacion" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=producto}" Header="Producto " Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=producto}" Header="Producto" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=kilogramos}" Header="Kilogramos " Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=habilitado}" Header="Habilitado " Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=Acciones}" Header="Acciones " Width="*" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Ver detalle" Width="75" Click="Button_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 
-
-
-        <Button Content="Ver Detalle" Grid.Column="4" HorizontalAlignment="Left" Margin="54,67,0,0" VerticalAlignment="Top" Width="75" Click="btn_ver_detalle_Click"/>
         <Label Content="Nuevos Pedidos" Grid.Column="2" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="161" FontSize="18" Grid.ColumnSpan="2"/>
 
 
