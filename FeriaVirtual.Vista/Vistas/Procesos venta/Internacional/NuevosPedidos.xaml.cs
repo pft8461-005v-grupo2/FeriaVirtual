@@ -29,12 +29,6 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             actualizar_tabla_datos_NuevosPedidos();
         }
 
-        private void btn_ver_detalle_Click(object sender, RoutedEventArgs e)
-        {
-            DetalleNuevosPedidos detalleNuevoP = new DetalleNuevosPedidos();
-            detalleNuevoP.Show();
-
-        }
 
         public void actualizar_tabla_datos_NuevosPedidos()
         {
@@ -48,14 +42,18 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             tabla_con_datos.TableName = "Lista de pedidos";
             tabla_con_datos.Columns.Add("id");
             tabla_con_datos.Columns.Add("cliente_id");
+            tabla_con_datos.Columns.Add("identificador");
+            tabla_con_datos.Columns.Add("razonsocial");
             tabla_con_datos.Columns.Add("fechacreacion");
             tabla_con_datos.Columns.Add("producto");
             tabla_con_datos.Columns.Add("kilogramos");
             tabla_con_datos.Columns.Add("habilitado");
             tabla_con_datos.Columns.Add("Acciones");
-       
+
             //tabla_con_datos.Columns.Add("accion");
 
+            Cliente cliente = new Cliente();
+            List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
@@ -63,6 +61,16 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
                     lista_obtenida[i].id,
                     lista_obtenida[i].cliente_id,
+                    (
+                        from cli in listaCliente
+                        where cli.id == lista_obtenida[i].cliente_id
+                        select cli.identificador
+                     ).First(),
+                    (
+                        from cli in listaCliente
+                        where cli.id == lista_obtenida[i].cliente_id
+                        select cli.razonSocial
+                     ).First(),
                     lista_obtenida[i].fechacreacion,
                     lista_obtenida[i].producto,
                     lista_obtenida[i].kilogramos,
@@ -74,7 +82,13 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
             data_NuevoPedidos.ItemsSource = tabla_con_datos.AsDataView();
 
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = data_NuevoPedidos.SelectedItem as DataRowView;
+            DetalleNuevosPedidos detalleNuevoP = new DetalleNuevosPedidos(dataRowView);
+            detalleNuevoP.Show();
 
         }
     }

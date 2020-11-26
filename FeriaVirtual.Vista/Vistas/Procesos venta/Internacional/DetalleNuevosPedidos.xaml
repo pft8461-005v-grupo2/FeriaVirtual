@@ -30,11 +30,11 @@
         <Label Content="País:" HorizontalAlignment="Left" Margin="58,184,0,0" VerticalAlignment="Top" Width="86"/>
         <Label Content="Detalle de nuevo pedido" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18" Width="254"/>
         <Label Content="Cliente ID:" HorizontalAlignment="Left" Margin="58,59,0,0" VerticalAlignment="Top" Height="26" Width="86"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,208,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,180,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,152,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,94,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_id" HorizontalAlignment="Left" Height="23" Margin="158,62,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,208,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,122,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_razonSocial" HorizontalAlignment="Left" Height="23" Margin="158,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
