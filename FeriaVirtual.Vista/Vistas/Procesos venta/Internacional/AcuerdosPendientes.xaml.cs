@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
@@ -17,24 +18,17 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     /// <summary>
     /// Lógica de interacción para AcuerdosPendientes.xaml
     /// </summary>
-    public partial class AcuerdosPendientes : Window
+    public partial class AcuerdosPendientes : Page
     {
         public AcuerdosPendientes()
         {
             InitializeComponent();
         }
 
-       
-
         private void Btn_ver_detalle_Click(object sender, RoutedEventArgs e)
         {
-            DetalleAcuerdoPendiente detalle_acuerdoP = new DetalleAcuerdoPendiente();
-            detalle_acuerdoP.Show();
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            DetalleAcuerdoPendiente detalleAcuerdoPendiente = new DetalleAcuerdoPendiente();
+            detalleAcuerdoPendiente.Show();
         }
     }
 }

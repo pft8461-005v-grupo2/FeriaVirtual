@@ -165,8 +165,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Procesos venta\Internacional\AcuerdosPendientes.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Procesos venta\Internacional\DetalleAcuerdoPendiente.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -181,8 +181,8 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Vistas\Procesos venta\Internacional\NuevosPedidos.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Procesos venta\Internacional\ProcesoVentaInternacional.xaml">
       <Generator>MSBuild:Compile</Generator>

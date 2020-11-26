@@ -152,7 +152,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             tb_ciudad.IsEnabled = habilitar;
             tb_pais_origen.IsEnabled = habilitar;
             tb_correo.IsEnabled = habilitar;
-            tb_contrasena.IsEnabled = habilitar;
+            //tb_contrasena.IsEnabled = habilitar;
             check_habilitar.IsEnabled = habilitar;
             check_deshabilitar.IsEnabled = habilitar;
             btn_guardar.IsEnabled = habilitar;
@@ -170,7 +170,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             tb_ciudad.Text = String.Empty;
             tb_pais_origen.Text = String.Empty;
             tb_correo.Text = String.Empty;
-            tb_contrasena.Text = String.Empty;
+            //tb_contrasena.Text = String.Empty;
             cbx_tipo_cliente.SelectedValue = -1;
             check_habilitar.IsChecked = false;
             check_deshabilitar.IsChecked = false;
@@ -222,20 +222,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
             if(response > 0)
             {
-                // Verifica si el campo contraseña tiene valor 
-                // Si tiene valor es para cambiar la contraseña
-                /*
-                if (tb_contrasena.Text.Trim().Length > 0)
-                {
-                    Usuario usuario_request = new Usuario();
-                    usuario_request.id = usuario_contexto.id;
 
-                    usuario_request.contrasena = tb_contrasena.Text.Trim();
-
-                    UsuarioService.actualizarUsuario(usuario_request);
-
-                }
-                */
 
                 string mensaje = "Cliente actualizado correctamente.";
                 string titulo = "Información";

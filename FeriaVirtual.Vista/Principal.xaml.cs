@@ -65,12 +65,12 @@ namespace FeriaVirtual.Vista
         //    (Application.Current as App).ResetSessionTimer();
         //}
 
-        private void btn_menu_ventaInternacional_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-            frameAdm.Content = new Vistas.Procesos_venta.Internacional.ProcesoVentaInternacional();
-            
-        }
+        //private void btn_menu_ventaInternacional_Click(object sender, RoutedEventArgs e)
+        //{
+        //    (Application.Current as App).ResetSessionTimer();
+        //    frameAdm.Content = new Vistas.Procesos_venta.Internacional.ProcesoVentaInternacional();
+
+        //}
 
         private void btn_menu_ventanacional_Click(object sender, RoutedEventArgs e)
         {
@@ -107,6 +107,16 @@ namespace FeriaVirtual.Vista
         private void btn_menu_transportista_Click(object sender, RoutedEventArgs e)
         {
             frameAdm.Content = new Vistas.Mantenedor.VistaTransportista();
+        }
+
+        private void btn_menu_nuevosPendientes_Click(object sender, RoutedEventArgs e)
+        {
+            frameAdm.Content = new Vistas.Procesos_venta.Internacional.NuevosPedidos();
+        }
+
+        private void btn_menu_acuerdosPendientes_Click(object sender, RoutedEventArgs e)
+        {
+            frameAdm.Content = new Vistas.Procesos_venta.Internacional.AcuerdosPendientes();
         }
 
         //private void btn_menu_activar_rol_Click(object sender, RoutedEventArgs e)
