@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional"
         mc:Ignorable="d"
-        Title="DetalleNuevosPedidos" Height="472.453" Width="800">
+        Title="DetalleNuevosPedidos" Height="379.911" Width="710.705">
     <Grid>
         <Grid.ColumnDefinitions>
 
@@ -14,15 +14,7 @@
             <ColumnDefinition Width="268"></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="160" Margin="58,246,0,0" VerticalAlignment="Top" Width="679" Grid.ColumnSpan="3">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="100" />
-                <DataGridTextColumn Binding="{Binding Path=detalle}" Header="Detalle" Width="400" />
-                <DataGridTextColumn Binding="{Binding Path=kilogramos}" Header="Kilogramos" Width="*" />
-            </DataGrid.Columns>
-
-        </DataGrid>
-        <Button Content="Generar Proceso Venta" Grid.Column="2" HorizontalAlignment="Left" Margin="68,411,0,0" VerticalAlignment="Top" Width="137" Click="Btn_generaProcesoVenta_Click"/>
+        <Button Content="Generar Proceso Venta" Grid.Column="1" HorizontalAlignment="Left" Margin="234,300,0,0" VerticalAlignment="Top" Width="137" Click="Btn_generaProcesoVenta_Click" Grid.ColumnSpan="2"/>
         <Label Content="Razón Social:" HorizontalAlignment="Left" Margin="58,90,0,0" VerticalAlignment="Top" Width="86"/>
         <Label Content="Identificador:" HorizontalAlignment="Left" Margin="58,121,0,0" VerticalAlignment="Top" Width="86"/>
         <Label Content="Dirección:" HorizontalAlignment="Left" Margin="58,152,0,0" VerticalAlignment="Top" Width="86"/>
@@ -31,10 +23,14 @@
         <Label Content="Detalle de nuevo pedido" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18" Width="254"/>
         <Label Content="Cliente ID:" HorizontalAlignment="Left" Margin="58,59,0,0" VerticalAlignment="Top" Height="26" Width="86"/>
         <TextBox Name="txt_id" HorizontalAlignment="Left" Height="23" Margin="158,62,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,208,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,122,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_correo" HorizontalAlignment="Left" Height="23" Margin="158,208,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_pais" HorizontalAlignment="Left" Height="23" Margin="158,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_direccion" HorizontalAlignment="Left" Height="23" Margin="158,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_identificador" HorizontalAlignment="Left" Height="23" Margin="158,122,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
         <TextBox Name="txt_razonSocial" HorizontalAlignment="Left" Height="23" Margin="158,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <Label Content="Kilogramos:" HorizontalAlignment="Left" Margin="58,266,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="Producto:" HorizontalAlignment="Left" Margin="58,240,0,0" VerticalAlignment="Top" Width="86"/>
+        <TextBox Name="txt_kilogramos" HorizontalAlignment="Left" Height="23" Margin="158,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_producto" HorizontalAlignment="Left" Height="23" Margin="158,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
