@@ -32,11 +32,24 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                 cliente.id = Int32.Parse(dataRowView.Row["cliente_id"] as string);
                 List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
-                if(listaCliente != null && listaCliente.Count == 1)
-                {
+                Solicitud_compra solicitud_Compra = new Solicitud_compra();
+                solicitud_Compra.id = Int32.Parse(dataRowView.Row["id"] as string);
+                List<Solicitud_compra> lista_obtenida = Solicitud_compraService.solicitud_Compras(solicitud_Compra);
+
+                if (listaCliente != null && listaCliente.Count == 1)
+
+                {  
                     cliente = listaCliente[0];
+                    solicitud_Compra = lista_obtenida[0];
                     txt_id.Text = cliente.id.ToString();
                     txt_razonSocial.Text = cliente.razonSocial;
+                    txt_identificador.Text = cliente.identificador;
+                    txt_direccion.Text = cliente.direccion;
+                    txt_pais.Text = cliente.pais_origen;
+                    txt_correo.Text = cliente.correo;
+                    txt_producto.Text = solicitud_Compra.producto;
+                    txt_kilogramos.Text = solicitud_Compra.kilogramos.ToString();
+                
                 }
                 
             }
