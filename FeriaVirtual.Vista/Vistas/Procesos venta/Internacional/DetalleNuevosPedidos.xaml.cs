@@ -38,9 +38,12 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
                 if (listaCliente != null && listaCliente.Count == 1)
 
-                {  
+                {
                     cliente = listaCliente[0];
                     solicitud_Compra = lista_obtenida[0];
+;
+                   
+                    
                     txt_id.Text = cliente.id.ToString();
                     txt_razonSocial.Text = cliente.razonSocial;
                     txt_identificador.Text = cliente.identificador;
@@ -49,7 +52,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     txt_correo.Text = cliente.correo;
                     txt_producto.Text = solicitud_Compra.producto;
                     txt_kilogramos.Text = solicitud_Compra.kilogramos.ToString();
-                
+                  
                 }
                 
             }

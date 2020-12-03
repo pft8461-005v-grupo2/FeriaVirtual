@@ -22,15 +22,15 @@
         <Label Content="País:" HorizontalAlignment="Left" Margin="58,184,0,0" VerticalAlignment="Top" Width="86"/>
         <Label Content="Detalle de nuevo pedido" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18" Width="254"/>
         <Label Content="Cliente ID:" HorizontalAlignment="Left" Margin="58,59,0,0" VerticalAlignment="Top" Height="26" Width="86"/>
-        <TextBox Name="txt_id" HorizontalAlignment="Left" Height="23" Margin="158,62,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox Name="txt_correo" HorizontalAlignment="Left" Height="23" Margin="158,208,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox Name="txt_pais" HorizontalAlignment="Left" Height="23" Margin="158,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox Name="txt_direccion" HorizontalAlignment="Left" Height="23" Margin="158,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox Name="txt_identificador" HorizontalAlignment="Left" Height="23" Margin="158,122,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox Name="txt_razonSocial" HorizontalAlignment="Left" Height="23" Margin="158,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <Label Content="Kilogramos:" HorizontalAlignment="Left" Margin="58,266,0,0" VerticalAlignment="Top" Width="86"/>
+        <TextBox Name="txt_id" HorizontalAlignment="Left" Height="23" Margin="158,62,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_correo" HorizontalAlignment="Left" Height="23" Margin="158,208,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_pais" HorizontalAlignment="Left" Height="23" Margin="158,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_direccion" HorizontalAlignment="Left" Height="23" Margin="158,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_identificador" HorizontalAlignment="Left" Height="23" Margin="158,122,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_razonSocial" HorizontalAlignment="Left" Height="23" Margin="158,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Kilogramos:" HorizontalAlignment="Left" Margin="58,266,0,0" VerticalAlignment="Top" Width="86" />
         <Label Content="Producto:" HorizontalAlignment="Left" Margin="58,240,0,0" VerticalAlignment="Top" Width="86"/>
-        <TextBox Name="txt_kilogramos" HorizontalAlignment="Left" Height="23" Margin="158,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox Name="txt_producto" HorizontalAlignment="Left" Height="23" Margin="158,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <TextBox Name="txt_kilogramos" HorizontalAlignment="Left" Height="23" Margin="158,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_producto" HorizontalAlignment="Left" Height="23" Margin="158,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
     </Grid>
 </Window>

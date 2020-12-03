@@ -32,8 +32,9 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
         public void actualizar_tabla_datos_NuevosPedidos()
         {
-            List<Solicitud_compra> lista_obtenida = Solicitud_compraService.solicitud_Compras();
+                 
 
+            List<Solicitud_compra> lista_obtenida = Solicitud_compraService.solicitud_Compras();
 
 
             DataTable tabla_con_datos = new DataTable();
@@ -53,10 +54,12 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             //tabla_con_datos.Columns.Add("accion");
 
             Cliente cliente = new Cliente();
+      
             List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
+                
                 tabla_con_datos.Rows.Add(
 
                     lista_obtenida[i].id,
@@ -75,10 +78,9 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     lista_obtenida[i].producto,
                     lista_obtenida[i].kilogramos,
                     lista_obtenida[i].habilitado
-
+                    
                     );
             }
-
 
             data_NuevoPedidos.ItemsSource = tabla_con_datos.AsDataView();
 

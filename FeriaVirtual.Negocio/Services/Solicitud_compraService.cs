@@ -19,16 +19,17 @@ namespace FeriaVirtual.Negocio.Services
             RestClient client = new RestClient(Endpoints.SERVER);
             RestRequest request = new RestRequest(Endpoints.solicitud_compra_consultar, Method.POST);
 
-
-            string data = JsonConvert.SerializeObject(new Solicitud_compra());
+            string data = JsonConvert.SerializeObject(new Solicitud_compra());        
             request.AddJsonBody(data);
 
             IRestResponse response = client.Execute(request);
-
-           List<Solicitud_compra> lista_Solicitud_compra_response = JsonConvert.DeserializeObject<List<Solicitud_compra>>(response.Content);
-
+                
+            List<Solicitud_compra> lista_Solicitud_compra_response = JsonConvert.DeserializeObject<List<Solicitud_compra>>(response.Content);
 
             return lista_Solicitud_compra_response != null ? lista_Solicitud_compra_response : new List<Solicitud_compra>(); ;
+
+
+
         }
 
         public static List<Solicitud_compra> solicitud_Compras(Solicitud_compra solicitud_Compra)
@@ -36,7 +37,7 @@ namespace FeriaVirtual.Negocio.Services
             RestClient client = new RestClient(Endpoints.SERVER);
             RestRequest request = new RestRequest(Endpoints.solicitud_compra_consultar, Method.POST);
 
-
+         
             string data = JsonConvert.SerializeObject(solicitud_Compra);
             request.AddJsonBody(data);
 
