@@ -65,9 +65,9 @@ namespace FeriaVirtual.Negocio.Services
 
         public static List<Cliente> consultarCliente()
         {
-
             RestClient client = new RestClient(Endpoints.SERVER);
             RestRequest request = new RestRequest(Endpoints.cliente_consultar, Method.POST);
+
 
             string data = JsonConvert.SerializeObject(new Cliente());
             request.AddJsonBody(data);
@@ -82,9 +82,9 @@ namespace FeriaVirtual.Negocio.Services
 
         public static List<Cliente> consultarCliente(Cliente cliente)
         {
-            
             RestClient client = new RestClient(Endpoints.SERVER);
             RestRequest request = new RestRequest(Endpoints.cliente_consultar, Method.POST);
+
 
             string data = JsonConvert.SerializeObject(cliente);
             request.AddJsonBody(data);

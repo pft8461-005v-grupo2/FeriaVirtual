@@ -8,7 +8,7 @@ namespace FeriaVirtual.Negocio.Models
 {
     public class Solicitud_compra
     {
-     
+        
         public int? id { get; set; } // ? para dejar en null un int
         public int? cliente_id { get; set; }
         public String fechacreacion { get; set; }

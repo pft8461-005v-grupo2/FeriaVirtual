@@ -19,7 +19,6 @@ namespace FeriaVirtual.Negocio.Models
         public int? tipo_cliente { get; set; }
         public string correo { get; set; }
         public int? habilitado { get; set; }
-      
 
     }
 }
