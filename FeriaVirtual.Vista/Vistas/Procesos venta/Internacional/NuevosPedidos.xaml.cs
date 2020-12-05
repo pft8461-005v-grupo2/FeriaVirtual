@@ -57,7 +57,13 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
-                tabla_con_datos.Rows.Add(
+                int? tipoCliente = (from cli in listaCliente
+                          where cli.id == lista_obtenida[i].cliente_id
+                          select cli.tipo_cliente).First();
+
+                    if (lista_obtenida[i].habilitado == 1 && tipoCliente == 1 )
+                {
+                    tabla_con_datos.Rows.Add(
 
                     lista_obtenida[i].id,
                     lista_obtenida[i].cliente_id,
@@ -77,6 +83,9 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     lista_obtenida[i].habilitado
 
                     );
+                
+
+              }
             }
 
 

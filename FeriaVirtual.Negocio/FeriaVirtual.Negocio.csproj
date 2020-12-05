@@ -67,6 +67,7 @@
     <Compile Include="Constants\Endpoints.cs" />
     <Compile Include="Constants\Parametros.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ProcesoVenta.cs" />
     <Compile Include="Models\Productor.cs" />
     <Compile Include="Models\ResponseObject.cs" />
     <Compile Include="Models\Solicitud_compra.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\ProcesoVentaService.cs" />
     <Compile Include="Services\ProductorService.cs" />
     <Compile Include="Services\Solicitud_compraService.cs" />
     <Compile Include="Services\TransportistaService.cs" />

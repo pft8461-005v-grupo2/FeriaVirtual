@@ -21,17 +21,26 @@
         </Grid.ColumnDefinitions>
 
         
-        <Label Content="Acuerdos Pendientes" Grid.Column="1" HorizontalAlignment="Left" Margin="140,3,0,0" VerticalAlignment="Top" Width="183" FontSize="18" Grid.ColumnSpan="3"/>
+        <Label Content="Acuerdos pendientes para enviar" Grid.Column="1" HorizontalAlignment="Left" Margin="81,3,0,0" VerticalAlignment="Top" Width="289" FontSize="18" Grid.ColumnSpan="3"/>
 
         <DataGrid Name="data_AcuerdosPendientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="413" Margin="0,37,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=descripcion}" Header="Descripcíon" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=cantidad}" Header="Cantidad" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=fecha}" Header="Fecha" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=valor}" Header="Valor" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=acciones}" Header="Accion" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="*"  Visibility="Collapsed"/>
+                <DataGridTextColumn Binding="{Binding Path=solicitud_compra_id}" Header="Solicitud compra id" Width="*" Visibility="Collapsed" />
+                <DataGridTextColumn Binding="{Binding Path=subasta_id}" Header="Subasta id" Width="*" Visibility="Collapsed"/>
+                <DataGridTextColumn Binding="{Binding Path=etapa}" Header="Etapa" Width="*" Visibility="Collapsed"/>
+                <DataGridTextColumn Binding="{Binding Path=fechacreacion}" Header="Fecha proceso venta" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=clienteaceptaacuerdo}" Header="Cliente acepta acuerdo" Width="*" Visibility="Collapsed" />
+                <DataGridTextColumn Binding="{Binding Path=precioventatotal}" Header="Precio venta total" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=preciocostototal}" Header="Precio costo total " Width="*" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Generar propuesta"  Padding="3,50,0,0" Width="75" Click="Btn_ver_detalle_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Ver Detalle" Grid.Column="4" HorizontalAlignment="Left" Margin="18,70,0,0" VerticalAlignment="Top" Width="138" Click="Btn_ver_detalle_Click"/>
     </Grid>
 </Page>
