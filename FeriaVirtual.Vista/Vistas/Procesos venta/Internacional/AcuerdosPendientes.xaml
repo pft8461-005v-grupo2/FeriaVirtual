@@ -36,7 +36,7 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Generar propuesta"  Padding="3,50,0,0" Width="75" Click="Btn_ver_detalle_Click"/>
+                            <Button Content="Generar propuesta"  Padding="3,3,0,0" Width="125" Click="Btn_ver_detalle_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

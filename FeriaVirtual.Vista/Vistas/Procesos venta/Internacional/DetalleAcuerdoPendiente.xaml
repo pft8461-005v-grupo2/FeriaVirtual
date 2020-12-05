@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional"
         mc:Ignorable="d"
-        Title="DetalleAcuerdoPendiente" Height="361.203" Width="710.705">
+        Title="DetalleAcuerdoPendiente" Height="378.284" Width="710.705">
     <Grid>
         <Grid.ColumnDefinitions>
 
@@ -30,7 +30,7 @@
         <Label Content="País origen:" HorizontalAlignment="Left" Margin="58,208,0,0" VerticalAlignment="Top" Width="95"/>
         <TextBox x:Name="txt_paisOrigen" HorizontalAlignment="Left" Height="23" Margin="190,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
         <Label Content="Precio costo total:" HorizontalAlignment="Left" Margin="58,236,0,0" VerticalAlignment="Top" Width="127"/>
-        <TextBox x:Name="txt_precioCostoTotal" HorizontalAlignment="Left" Height="23" Margin="190,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" />
+        <TextBox x:Name="txt_precioCostoTotal" HorizontalAlignment="Left" Height="23" Margin="190,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
         <Button Content="Enviar" Grid.Column="2" HorizontalAlignment="Left" Margin="64,300,0,0" VerticalAlignment="Top" Width="75" Click="Btn_enviar_propuesta_Click"/>
     </Grid>
 </Window>
