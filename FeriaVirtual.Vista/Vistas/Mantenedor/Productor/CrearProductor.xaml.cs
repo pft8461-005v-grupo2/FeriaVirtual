@@ -47,12 +47,12 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
             id_usuario_creado = UsuarioService.crearUsuario(Parametros.ROLE_PRODUCTOR, productor.correo, productor.rut);
 
 
-            int id_transportista_creado = 0;
+            int id_productor_creado = 0;
 
             if (id_usuario_creado != -1)
             {
                 productor.usuario_id = id_usuario_creado;
-                id_transportista_creado = ProductorService.crearProductor(productor);
+                id_productor_creado = ProductorService.crearProductor(productor);
             }
 
 

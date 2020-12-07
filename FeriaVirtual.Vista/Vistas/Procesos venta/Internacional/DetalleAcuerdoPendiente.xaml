@@ -18,8 +18,8 @@
         <Label Content="Precio venta total" HorizontalAlignment="Left" Margin="58,264,0,0" VerticalAlignment="Top" Width="115"/>
         <Label Content="Identificador:" HorizontalAlignment="Left" Margin="58,121,0,0" VerticalAlignment="Top" Width="95"/>
         <Label Content="Propuesta de venta" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18" Width="254"/>
-        <Label Content="Solicitud compra:" HorizontalAlignment="Left" Margin="58,59,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
-        <TextBox Name="txt_solicitud_compra" HorizontalAlignment="Left" Height="23" Margin="190,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Solicitud compra:" HorizontalAlignment="Left" Margin="58,65,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox Name="txt_solicitud_compra" HorizontalAlignment="Left" Height="23" Margin="190,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
         <TextBox Name="txt_precioVentaTotal" HorizontalAlignment="Left" Height="23" Margin="190,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" />
         <TextBox Name="txt_identificador" HorizontalAlignment="Left" Height="23" Margin="190,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
         <TextBox Name="txt_fechaCreacion" HorizontalAlignment="Left" Height="23" Margin="190,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
