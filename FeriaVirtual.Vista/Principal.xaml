@@ -26,7 +26,7 @@
         </Grid.ColumnDefinitions>
         <Menu  x:Name="menu" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="6">
             <MenuItem Header="Cuenta">
-                <MenuItem x:Name="btn_micuenta" Header="Mi información" Click="btn_micuenta_Click" Visibility="Collapsed" />
+                <!--<MenuItem x:Name="btn_micuenta" Header="Mi información" Click="btn_micuenta_Click" Visibility="Collapsed" />-->
                 <MenuItem x:Name="btn_cerrarSesion" Header="Cerrar Sesión" Click="btn_cerrarSesion_Click"/>
                 <Separator />
                 <MenuItem x:Name="btn_cerrarAplicacion" Header="Cerrar" Click="btn_cerrarAplicacion_Click"/>
@@ -35,7 +35,7 @@
                 <MenuItem x:Name="btn_menu_cliente" Header="Cliente" Click="btn_menu_cliente_Click"/>
                 <MenuItem x:Name="btn_menu_producto" Header="Productor" Click="btn_menu_producto_Click"/>
                 <MenuItem x:Name="btn_menu_transportista" Header="Transportista" Click="btn_menu_transportista_Click"/>
-
+                <MenuItem x:Name="btn_menu_productos" Header="Productos" Click="btn_menu_productos_Click" />
 
             </MenuItem>
 

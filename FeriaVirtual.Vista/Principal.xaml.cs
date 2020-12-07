@@ -27,15 +27,11 @@ namespace FeriaVirtual.Vista
 
 
 
-        private void btn_micuenta_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-        }
+
 
         private void btn_cerrarSesion_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-            //(Application.Current as App).StopSessionTimer();
             Application.Current.Shutdown();
         }
 
@@ -44,55 +40,13 @@ namespace FeriaVirtual.Vista
             Application.Current.Shutdown(-1);
         }
 
-        //private void btnCrear_Usuario_Click(object sender, RoutedEventArgs e)
-        //{
-        //    //(Application.Current as App).ResetSessionTimer();
-        //    frameAdm.Content = new Vistas.Usuario.CrearUsuario();
-        //}
-
-        //private void btn_menu_modificar_usuario_Click(object sender, RoutedEventArgs e)
-        //{
-        //    //(Application.Current as App).ResetSessionTimer();
-        //}
-
-        private void btn_menu_activar_usuario_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-        }
-
-        //private void btn_menu_perfil_Click(object sender, RoutedEventArgs e)
-        //{
-        //    (Application.Current as App).ResetSessionTimer();
-        //}
-
-        //private void btn_menu_ventaInternacional_Click(object sender, RoutedEventArgs e)
-        //{
-        //    (Application.Current as App).ResetSessionTimer();
-        //    frameAdm.Content = new Vistas.Procesos_venta.Internacional.ProcesoVentaInternacional();
-
-        //}
 
         private void btn_menu_ventanacional_Click(object sender, RoutedEventArgs e)
         {
-            //(Application.Current as App).ResetSessionTimer();
+            
              frameAdm.Content = new Vistas.Procesos_venta.Nacional.ProcesoVentaNacional();
         }
 
-        private void btnCrear_rol_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-            
-        }
-
-        private void btn_menu_activar_rol_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-        }
-
-        private void btn_menu_modificar_rol_Click(object sender, RoutedEventArgs e)
-        {
-            //(Application.Current as App).ResetSessionTimer();
-        }
 
         private void btn_menu_cliente_Click(object sender, RoutedEventArgs e)
         {
@@ -119,15 +73,11 @@ namespace FeriaVirtual.Vista
             frameAdm.Content = new Vistas.Procesos_venta.Internacional.AcuerdosPendientes();
         }
 
-        //private void btn_menu_activar_rol_Click(object sender, RoutedEventArgs e)
-        //{
-        //    (Application.Current as App).ResetSessionTimer();
-        //}
+        private void btn_menu_productos_Click(object sender, RoutedEventArgs e)
+        {
+            frameAdm.Content = new Vistas.Mantenedor.Productos.VistaProductos();
+        }
 
-        //private void btn_menu_modificar_rol_Click(object sender, RoutedEventArgs e)
-        //{
-        //    (Application.Current as App).ResetSessionTimer();
 
-        //}
     }
 }
