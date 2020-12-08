@@ -71,5 +71,23 @@ namespace FeriaVirtual.Negocio.Services
                 return -1;
 
         }
+
+        public static int? iniciarProcesoVenta(ProcesoVenta procesoVenta)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.procesoVenta_iniciar, Method.POST);
+
+            string data = JsonConvert.SerializeObject(procesoVenta);
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            int? response_object = JsonConvert.DeserializeObject<int?>(response.Content);
+
+            return response_object;
+
+        }
+
+
     }
 }

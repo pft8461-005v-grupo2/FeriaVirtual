@@ -22,6 +22,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     /// </summary>
     public partial class DetalleNuevosPedidos : Window
     {
+        private int? solicitudCompraContexto = -1;
         public DetalleNuevosPedidos(DataRowView dataRowView)
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                 Solicitud_compra solicitud_Compra = new Solicitud_compra();
                 solicitud_Compra.id = Int32.Parse(dataRowView.Row["id"] as string);
                 List<Solicitud_compra> lista_obtenida = Solicitud_compraService.solicitud_Compras(solicitud_Compra);
-
+                solicitudCompraContexto = solicitud_Compra.id;
                 if (listaCliente != null && listaCliente.Count == 1)
 
                 {  
@@ -61,6 +62,56 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
         private void Btn_generaProcesoVenta_Click(object sender, RoutedEventArgs e)
         {
 
+            ProcesoVenta procesoVenta = new ProcesoVenta();
+            procesoVenta.solicitud_compra_id = solicitudCompraContexto;
+           int? respuesta=  ProcesoVentaService.iniciarProcesoVenta(procesoVenta);
+
+            //-3 = producto no encontrado
+            //-2 = Solicitud no encontrada
+            //-1 = Error
+            //1 = Se creo proceso y no hay stock
+            //2 = Se creo proceso y stock insuficiente
+            //3 = Se creo proceso y stock suficiente
+
+
+            String mensaje = "";
+            MessageBoxImage icono = MessageBoxImage.Information;
+            switch (respuesta)
+            {
+                case -3 :
+                    mensaje = "No existe producto a  procesar. Favor crear el producto en sistema";
+                    icono = MessageBoxImage.Error;
+                    break;
+                case -2:
+                    mensaje = "No existe solicitud de compra";
+                    icono = MessageBoxImage.Error;
+                    break;
+                case -1:
+                    mensaje = "Error de sistema. Contacta con el administrador de sistema";
+                    icono = MessageBoxImage.Error;
+                    break;
+                case 1:
+                    mensaje = "Se inició el proceso de venta, pero no hay stock del producto seleccionado";
+                    icono = MessageBoxImage.Warning;
+                    break;
+                case 2:
+                    mensaje = "Se inició el proceso de venta, pero el stock es insuficiente";
+                    icono = MessageBoxImage.Warning;
+                    break;
+                case 3:
+                    mensaje = "Se inició el proceso de venta correctamente";
+                    icono = MessageBoxImage.Information;
+                    break;
+                default:
+                    mensaje = "Error no tratado";
+                    break;
+            }
+
+            
+            string titulo = "Información";
+            MessageBoxButton tipo = MessageBoxButton.OK;
+            MessageBox.Show(mensaje, titulo, tipo, icono);
+            return;
         }
     }
 }

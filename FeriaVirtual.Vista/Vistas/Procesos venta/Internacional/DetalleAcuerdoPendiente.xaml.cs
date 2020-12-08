@@ -42,7 +42,6 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
                 int? cliente_id = (
                      from sol in lista_obtenida
-
                      select sol.cliente_id
                   ).First();
 
