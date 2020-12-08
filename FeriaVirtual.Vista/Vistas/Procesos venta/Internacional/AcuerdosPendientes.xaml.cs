@@ -50,7 +50,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
-                if (lista_obtenida[i].etapa == 3) {
+                if (lista_obtenida[i].etapa == 2) {
                     tabla_con_datos.Rows.Add(
 
                     lista_obtenida[i].id,

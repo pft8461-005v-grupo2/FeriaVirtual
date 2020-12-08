@@ -32,5 +32,6 @@
         <Label Content="Precio costo total:" HorizontalAlignment="Left" Margin="58,236,0,0" VerticalAlignment="Top" Width="127"/>
         <TextBox x:Name="txt_precioCostoTotal" HorizontalAlignment="Left" Height="23" Margin="190,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
         <Button Content="Enviar" Grid.Column="2" HorizontalAlignment="Left" Margin="64,300,0,0" VerticalAlignment="Top" Width="75" Click="Btn_enviar_propuesta_Click"/>
+        <TextBox x:Name="txt_id" HorizontalAlignment="Left" Height="23" Margin="190,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" Grid.ColumnSpan="3" Visibility="Collapsed" />
     </Grid>
 </Window>
