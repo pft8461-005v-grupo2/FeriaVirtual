@@ -38,11 +38,11 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
         //    acuerdosPendientes.Show();
         //}
 
-        private void Btn_ver_subasta_Click(object sender, RoutedEventArgs e)
-        {
-            GenerarSubastas generarSubastas = new GenerarSubastas();
-            generarSubastas.Show();
-        }
+        //private void Btn_ver_subasta_Click(object sender, RoutedEventArgs e)
+        //{
+        //    GenerarSubastas generarSubastas = new GenerarSubastas();
+        //    generarSubastas.Show();
+        //}
 
         private void Btn_ver_Pedidos_despachar_Click(object sender, RoutedEventArgs e)
         {

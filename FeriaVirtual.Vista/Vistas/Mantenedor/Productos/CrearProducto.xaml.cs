@@ -37,7 +37,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor.Productos
         {
             Producto producto = new Producto();
 
-            producto.descripcion = txt_descipcion.Text;
+            producto.descripcion = txt_descipcion.Text.ToUpper();
 
             int producto_id_creado = 0;
 

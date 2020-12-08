@@ -18,21 +18,18 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     /// <summary>
     /// Lógica de interacción para GenerarSubastas.xaml
     /// </summary>
-    public partial class GenerarSubastas : Window
+    public partial class GenerarSubastas : Page
     {
         public GenerarSubastas()
         {
             InitializeComponent();
         }
 
-        private void btn_iniciar_subasta_Click(object sender, RoutedEventArgs e)
+        private void Btn_iniciar_subasta_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
     }
 }
