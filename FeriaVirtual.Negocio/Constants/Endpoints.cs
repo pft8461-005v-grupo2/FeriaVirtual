@@ -32,5 +32,6 @@ namespace FeriaVirtual.Negocio.Constants
         public const string productor_actualizar = "/productor/actualizar";
         public const string transportista_actualizar = "/transportista/actualizar";
         public const string producto_actualizar = "/producto/actualizar";
+        public const string procesoVenta_actualizar = "/proceso-venta/actualizar";
     }
 }

@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 {
     /// <summary>
@@ -22,6 +23,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     /// </summary>
     public partial class DetalleAcuerdoPendiente : Window
     {
+        ProcesoVenta procesos_Venta_contexto = new ProcesoVenta();
         public DetalleAcuerdoPendiente(DataRowView dataRowView)
         {
             InitializeComponent();
@@ -69,17 +71,64 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     txt_razonSocial.Text = cliente.razonSocial;
                     txt_correo.Text = cliente.correo;
                     txt_paisOrigen.Text = cliente.pais_origen;
+                    txt_id.Text = procesoVenta.id.ToString();
 
                 }
 
             }
         }
 
-      
+     
 
         private void Btn_enviar_propuesta_Click(object sender, RoutedEventArgs e)
         {
+            //actualizar a etapa 3 el registro
 
+            ProcesoVenta procesoVenta = new ProcesoVenta();
+            procesoVenta.id = Int32.Parse(txt_id.Text);
+            List<ProcesoVenta> listaProcesoVenta = ProcesoVentaService.consultar_ProcesoVenta(procesoVenta);
+
+            if (listaProcesoVenta != null)
+
+            {
+                procesoVenta = listaProcesoVenta[0];
+
+                for (int i = 0; i < listaProcesoVenta.Count; i++)
+                {
+                    if (txt_precioVentaTotal.Text.Trim() != listaProcesoVenta[i].precioventatotal.ToString())
+                    {
+                        procesoVenta.precioventatotal = Int32.Parse(txt_precioVentaTotal.Text.Trim());
+                    }
+
+                    procesoVenta.etapa = 3;
+
+                    int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
+
+                    if (response == -1)
+                    {
+
+                        string mensaje = "No se pudo actualizar ";
+                        string titulo = "Error";
+                        MessageBoxButton tipo = MessageBoxButton.OK;
+                        MessageBoxImage icono = MessageBoxImage.Error;
+                        MessageBox.Show(mensaje, titulo, tipo, icono);
+                        return;
+
+                    }
+
+                    if (response > 0)
+                    {
+
+                        string mensaje = "actualizado correctamente.";
+                        string titulo = "Información";
+                        MessageBoxButton tipo = MessageBoxButton.OK;
+                        MessageBoxImage icono = MessageBoxImage.Information;
+                        MessageBox.Show(mensaje, titulo, tipo, icono);
+                        return;
+                   
+                    }
+                }
+            }
         }
     }
 }
