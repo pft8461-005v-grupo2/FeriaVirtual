@@ -18,17 +18,7 @@
 
 
         </Grid.ColumnDefinitions>
-        <!--<DataGrid HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" Margin="0,0,0,-10" >
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=descripcion}" Header="Descripcíon" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=cantidad}" Header="Cantidad" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=cliente}" Header="Cliente" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=fecha}" Header="Fecha" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=acciones}" Header="Acciones" Width="*" />
-            </DataGrid.Columns>
-            
-            
-        </DataGrid>-->
+ 
 
         <DataGrid Name="data_NuevoPedidos" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="413" Margin="0,37,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>

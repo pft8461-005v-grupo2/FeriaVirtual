@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional"
         mc:Ignorable="d"
-        Title="DetalleAcuerdoPendiente" Height="473.389" Width="800">
+        Title="DetalleAcuerdoPendiente" Height="378.284" Width="710.705">
     <Grid>
         <Grid.ColumnDefinitions>
 
@@ -14,31 +14,24 @@
             <ColumnDefinition Width="268"></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="160" Margin="10,246,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="3">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="50" />
-                <DataGridTextColumn Binding="{Binding Path=detalle}" Header="Detalle" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=kilogramos}" Header="Kilogramos" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=proveedor}" Header="Proveedor" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=precio_por_KG}" Header="Precio por KG" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=precio_total}" Header="Precio total" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=acciones}" Header="Acciones" Width="*" />
-            </DataGrid.Columns>
-
-        </DataGrid>
-        <Button Content="Generar Acuerdo" Grid.Column="2" HorizontalAlignment="Left" Margin="113,412,0,0" VerticalAlignment="Top" Width="137"/>
-        <Label Content="Razón Social:" HorizontalAlignment="Left" Margin="58,90,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Identificador:" HorizontalAlignment="Left" Margin="58,121,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Dirección:" HorizontalAlignment="Left" Margin="58,152,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Correo:" HorizontalAlignment="Left" Margin="58,210,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="País:" HorizontalAlignment="Left" Margin="58,184,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label Content="Detalle acuerdo pendiente" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18" Width="254"/>
-        <Label Content="Cliente ID:" HorizontalAlignment="Left" Margin="58,59,0,0" VerticalAlignment="Top" Height="26" Width="86"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,208,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,180,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,152,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="158,94,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3"/>
+        <Label Content="Fecha proceso venta:" HorizontalAlignment="Left" Margin="58,94,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label Content="Precio venta total" HorizontalAlignment="Left" Margin="58,264,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Content="Identificador:" HorizontalAlignment="Left" Margin="58,121,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Propuesta de venta" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18" Width="254"/>
+        <Label Content="Solicitud compra:" HorizontalAlignment="Left" Margin="58,65,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox Name="txt_solicitud_compra" HorizontalAlignment="Left" Height="23" Margin="190,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_precioVentaTotal" HorizontalAlignment="Left" Height="23" Margin="190,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" />
+        <TextBox Name="txt_identificador" HorizontalAlignment="Left" Height="23" Margin="190,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_fechaCreacion" HorizontalAlignment="Left" Height="23" Margin="190,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Correo:" HorizontalAlignment="Left" Margin="58,180,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_correo" HorizontalAlignment="Left" Height="23" Margin="190,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Razón social:" HorizontalAlignment="Left" Margin="58,149,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_razonSocial" HorizontalAlignment="Left" Height="23" Margin="190,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="País origen:" HorizontalAlignment="Left" Margin="58,208,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_paisOrigen" HorizontalAlignment="Left" Height="23" Margin="190,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Precio costo total:" HorizontalAlignment="Left" Margin="58,236,0,0" VerticalAlignment="Top" Width="127"/>
+        <TextBox x:Name="txt_precioCostoTotal" HorizontalAlignment="Left" Height="23" Margin="190,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Button Content="Enviar" Grid.Column="2" HorizontalAlignment="Left" Margin="64,300,0,0" VerticalAlignment="Top" Width="75" Click="Btn_enviar_propuesta_Click"/>
+        <TextBox x:Name="txt_id" HorizontalAlignment="Left" Height="23" Margin="190,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" Grid.ColumnSpan="3" Visibility="Collapsed" />
     </Grid>
 </Window>

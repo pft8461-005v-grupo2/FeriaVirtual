@@ -67,6 +67,15 @@
     <Compile Include="Vistas\Mantenedor\Productor\CrearProductor.xaml.cs">
       <DependentUpon>CrearProductor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Mantenedor\Productos\CrearProducto.xaml.cs">
+      <DependentUpon>CrearProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\Productos\EditarProducto.xaml.cs">
+      <DependentUpon>EditarProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenedor\Productos\VistaProductos.xaml.cs">
+      <DependentUpon>VistaProductos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Mantenedor\Transportista\CrearTransportista.xaml.cs">
       <DependentUpon>CrearTransportista.xaml</DependentUpon>
     </Compile>
@@ -137,6 +146,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Mantenedor\Productor\CrearProductor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\Productos\CrearProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\Productos\EditarProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenedor\Productos\VistaProductos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
