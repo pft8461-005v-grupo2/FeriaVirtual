@@ -106,11 +106,11 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     mensaje = "Error no tratado";
                     break;
             }
-
-            
+          
             string titulo = "Información";
             MessageBoxButton tipo = MessageBoxButton.OK;
             MessageBox.Show(mensaje, titulo, tipo, icono);
+            this.Close();
             return;
         }
     }
