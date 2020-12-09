@@ -35,10 +35,12 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             List<ProcesoVenta> lista_obtenida = ProcesoVentaService.consultar_ProcesoVenta();
 
             DataTable tabla_con_datos = new DataTable();
-            //int c = 0;
+      
 
             tabla_con_datos.TableName = "Lista de pedidos";
             tabla_con_datos.Columns.Add("id");
+            tabla_con_datos.Columns.Add("identificador");
+            tabla_con_datos.Columns.Add("razonsocial");
             tabla_con_datos.Columns.Add("solicitud_compra_id");
             tabla_con_datos.Columns.Add("subasta_id");
             tabla_con_datos.Columns.Add("etapa");
@@ -47,29 +49,52 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             tabla_con_datos.Columns.Add("precioventatotal");
             tabla_con_datos.Columns.Add("preciocostototal");
 
+            Solicitud_compra solicitud_Compra = new Solicitud_compra();
+            List<Solicitud_compra> listaSolicitudCompra = Solicitud_compraService.solicitud_Compras(solicitud_Compra);
+
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
-                if (lista_obtenida[i].etapa == 2) {
-                    tabla_con_datos.Rows.Add(
+                int? cliente_id = (from sol in listaSolicitudCompra
+                                           where sol.id==lista_obtenida[i].solicitud_compra_id
+                                           select sol.cliente_id ).First();
 
-                    lista_obtenida[i].id,
-                    lista_obtenida[i].solicitud_compra_id,
-                    lista_obtenida[i].subasta_id,
-                    lista_obtenida[i].etapa,
-                    lista_obtenida[i].fechacreacion,
-                    lista_obtenida[i].clienteaceptaacuerdo,
-                    lista_obtenida[i].precioventatotal,
-                    lista_obtenida[i].preciocostototal
+                Cliente cliente = new Cliente();
+                cliente.id = cliente_id;
 
-                    );
-                };
+                List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
-                
+                cliente = (
+                     from cli in listaCliente
+
+                     select cli
+                  ).First();
+
+
+
+                if (lista_obtenida[i].etapa == 2)
+                    {
+
+                        tabla_con_datos.Rows.Add(
+
+                        lista_obtenida[i].id,
+                        cliente.identificador,
+                        cliente.razonSocial,
+                        lista_obtenida[i].solicitud_compra_id,
+                        lista_obtenida[i].subasta_id,
+                        lista_obtenida[i].etapa,
+                        lista_obtenida[i].fechacreacion,
+                        lista_obtenida[i].clienteaceptaacuerdo,
+                        lista_obtenida[i].precioventatotal,
+                        lista_obtenida[i].preciocostototal
+
+
+                        );
+                    };
+
+
+                data_AcuerdosPendientes.ItemsSource = tabla_con_datos.AsDataView();
             }
-
-
-            data_AcuerdosPendientes.ItemsSource = tabla_con_datos.AsDataView();
 
         }
 
@@ -78,6 +103,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             DataRowView dataRowView = data_AcuerdosPendientes.SelectedItem as DataRowView;
             DetalleAcuerdoPendiente detalleAcuerdoPendiente = new DetalleAcuerdoPendiente(dataRowView);
             detalleAcuerdoPendiente.Show();
+           
         }
     }
 }

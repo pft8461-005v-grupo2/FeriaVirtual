@@ -1,0 +1,37 @@
+﻿<Window x:Class="FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional.DetalleGenerarSubasta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional"
+        mc:Ignorable="d"
+        Title="DetalleGenerarSubasta" Height="378.284" Width="710.705">
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="268"></ColumnDefinition>
+            <ColumnDefinition Width="264"></ColumnDefinition>
+            <ColumnDefinition Width="268"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Label Content="Fecha proceso venta:" HorizontalAlignment="Left" Margin="58,94,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label Content="Precio venta total" HorizontalAlignment="Left" Margin="58,264,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Content="Identificador:" HorizontalAlignment="Left" Margin="58,121,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Subasta" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18" Width="254"/>
+        <Label Content="Solicitud compra:" HorizontalAlignment="Left" Margin="58,65,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
+        <TextBox Name="txt_solicitud_compra" HorizontalAlignment="Left" Height="23" Margin="190,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_precioVentaTotal" HorizontalAlignment="Left" Height="23" Margin="190,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False" />
+        <TextBox Name="txt_identificador" HorizontalAlignment="Left" Height="23" Margin="190,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <TextBox Name="txt_fechaCreacion" HorizontalAlignment="Left" Height="23" Margin="190,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Correo:" HorizontalAlignment="Left" Margin="58,180,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_correo" HorizontalAlignment="Left" Height="23" Margin="190,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Razón social:" HorizontalAlignment="Left" Margin="58,149,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_razonSocial" HorizontalAlignment="Left" Height="23" Margin="190,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="País origen:" HorizontalAlignment="Left" Margin="58,208,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txt_paisOrigen" HorizontalAlignment="Left" Height="23" Margin="190,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Label Content="Precio costo total:" HorizontalAlignment="Left" Margin="58,236,0,0" VerticalAlignment="Top" Width="127"/>
+        <TextBox x:Name="txt_precioCostoTotal" HorizontalAlignment="Left" Height="23" Margin="190,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="481" Grid.ColumnSpan="3" IsEnabled="False"/>
+        <Button Content="Enviar" Grid.Column="2" HorizontalAlignment="Left" Margin="64,300,0,0" VerticalAlignment="Top" Width="75" Click="Btn_enviar_subasta_Click"/>
+        <TextBox x:Name="txt_id" HorizontalAlignment="Left" Height="23" Margin="190,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="393" Grid.ColumnSpan="3" Visibility="Collapsed" />
+    </Grid>
+</Window>

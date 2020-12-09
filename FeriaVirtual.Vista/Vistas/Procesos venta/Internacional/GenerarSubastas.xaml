@@ -19,19 +19,24 @@
         </Grid.ColumnDefinitions>
 
 
-        <Label Content="Subastas" Grid.Column="1" HorizontalAlignment="Left" Margin="81,3,0,0" VerticalAlignment="Top" Width="289" FontSize="18" Grid.ColumnSpan="3"/>
+        <Label Content="Generar subastas" Grid.Column="1" HorizontalAlignment="Left" Margin="81,3,0,0" VerticalAlignment="Top" Width="289" FontSize="18" Grid.ColumnSpan="3"/>
 
         <DataGrid Name="data_AcuerdosPendientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="413" Margin="0,37,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="*"  Visibility="Collapsed"/>
-                <DataGridTextColumn Binding="{Binding Path=fechatermino}" Header="Fecha termino" Width="*"  />
-                <DataGridTextColumn Binding="{Binding Path=precioganador}" Header="Precio ganador" Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=habilitado}" Header="Habilitado" Width="*" />
-
+                <DataGridTextColumn Binding="{Binding Path=id}" Header="ID" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=identificador}" Header="Idenficador" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=razonsocial}" Header="Razon social" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=solicitud_compra_id}" Header="Solicitud compra id" Width="*" Visibility="Collapsed" />
+                <DataGridTextColumn Binding="{Binding Path=subasta_id}" Header="Subasta id" Width="*" Visibility="Collapsed"/>
+                <DataGridTextColumn Binding="{Binding Path=etapa}" Header="Etapa" Width="*" Visibility="Collapsed"/>
+                <DataGridTextColumn Binding="{Binding Path=fechacreacion}" Header="Fecha proceso venta" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=clienteaceptaacuerdo}" Header="Cliente acepta acuerdo" Width="*" Visibility="Collapsed" />
+                <DataGridTextColumn Binding="{Binding Path=precioventatotal}" Header="Precio venta total" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=preciocostototal}" Header="Precio costo total " Width="*" />
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Iniciar"  Padding="3,3,0,0" Width="125" Click="Btn_iniciar_subasta_Click"/>
+                            <Button Content="iniciar subasta"  Padding="3,3,0,0" Width="125" Click="Btn_ver_detalle_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

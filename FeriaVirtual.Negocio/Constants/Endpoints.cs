@@ -18,7 +18,7 @@ namespace FeriaVirtual.Negocio.Constants
         public const string solicitud_compra_consultar = "/solicitud-compra/consultar";
         public const string procesoVenta_consultar = "/proceso-venta/consultar";
         public const string producto_consultar = "/producto/consultar";
-
+        public const string subasta_consultar = "/subasta/consultar";
 
         // Crear
         public const string usuario_crear = "/usuario/crear";
@@ -33,5 +33,8 @@ namespace FeriaVirtual.Negocio.Constants
         public const string transportista_actualizar = "/transportista/actualizar";
         public const string producto_actualizar = "/producto/actualizar";
         public const string procesoVenta_actualizar = "/proceso-venta/actualizar";
+
+        // Gestiones
+        public const string procesoVenta_iniciar = "/proceso-internacional/iniciar-proceso";
     }
 }

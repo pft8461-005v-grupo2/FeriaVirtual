@@ -100,8 +100,14 @@
     <Compile Include="Vistas\Procesos venta\Internacional\DetalleAcuerdoPendiente.xaml.cs">
       <DependentUpon>DetalleAcuerdoPendiente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\DetalleGenerarSubasta.xaml.cs">
+      <DependentUpon>DetalleGenerarSubasta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Procesos venta\Internacional\DetalleNuevosPedidos.xaml.cs">
       <DependentUpon>DetalleNuevosPedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Procesos venta\Internacional\DetalleVentaDespachar.xaml.cs">
+      <DependentUpon>DetalleVentaDespachar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Procesos venta\Internacional\GenerarSubastas.xaml.cs">
       <DependentUpon>GenerarSubastas.xaml</DependentUpon>
@@ -193,9 +199,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\DetalleGenerarSubasta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\Procesos venta\Internacional\DetalleNuevosPedidos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Internacional\DetalleVentaDespachar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Procesos venta\Internacional\GenerarSubastas.xaml">
       <Generator>MSBuild:Compile</Generator>
