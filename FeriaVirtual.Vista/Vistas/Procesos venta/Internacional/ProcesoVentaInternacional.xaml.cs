@@ -44,10 +44,10 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
         //    generarSubastas.Show();
         //}
 
-        private void Btn_ver_Pedidos_despachar_Click(object sender, RoutedEventArgs e)
-        {
-            VentaDespachar ventaDespachar = new VentaDespachar();
-            ventaDespachar.Show();
-        }
+        //private void Btn_ver_Pedidos_despachar_Click(object sender, RoutedEventArgs e)
+        //{
+        //    VentaDespachar ventaDespachar = new VentaDespachar();
+        //    ventaDespachar.Show();
+        //}
     }
 }

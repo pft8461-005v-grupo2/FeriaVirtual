@@ -15,15 +15,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 {
     /// <summary>
-    /// Lógica de interacción para DetalleGenerarSubasta.xaml
+    /// Lógica de interacción para DetalleVentaDespachar.xaml
     /// </summary>
-    public partial class DetalleGenerarSubasta : Window
+    public partial class DetalleVentaDespachar : Window
     {
-        public DetalleGenerarSubasta(DataRowView dataRowView)
+        public DetalleVentaDespachar( DataRowView dataRowView)
         {
             InitializeComponent();
             if (dataRowView != null)
@@ -86,35 +85,35 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             {
                 procesoVenta = listaProcesoVenta[0];
 
- 
-                    procesoVenta.etapa = 8;
 
-                    int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
+                procesoVenta.etapa = 8;
 
-                    if (response == -1)
-                    {
+                int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
 
-                        string mensaje = "No se pudo actualizar ";
-                        string titulo = "Error";
-                        MessageBoxButton tipo = MessageBoxButton.OK;
-                        MessageBoxImage icono = MessageBoxImage.Error;
-                        MessageBox.Show(mensaje, titulo, tipo, icono);
-                        return;
+                if (response == -1)
+                {
 
-                    }
+                    string mensaje = "No se pudo actualizar ";
+                    string titulo = "Error";
+                    MessageBoxButton tipo = MessageBoxButton.OK;
+                    MessageBoxImage icono = MessageBoxImage.Error;
+                    MessageBox.Show(mensaje, titulo, tipo, icono);
+                    return;
 
-                    if (response > 0)
-                    {
+                }
 
-                        string mensaje = "actualizado correctamente.";
-                        string titulo = "Información";
-                        MessageBoxButton tipo = MessageBoxButton.OK;
-                        MessageBoxImage icono = MessageBoxImage.Information;
-                        MessageBox.Show(mensaje, titulo, tipo, icono);
-                        return;
+                if (response > 0)
+                {
 
-                    }
-                
+                    string mensaje = "actualizado correctamente.";
+                    string titulo = "Información";
+                    MessageBoxButton tipo = MessageBoxButton.OK;
+                    MessageBoxImage icono = MessageBoxImage.Information;
+                    MessageBox.Show(mensaje, titulo, tipo, icono);
+                    return;
+
+                }
+
             }
         }
     }

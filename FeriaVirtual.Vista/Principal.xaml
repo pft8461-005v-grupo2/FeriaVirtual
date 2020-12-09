@@ -46,7 +46,7 @@
                     <MenuItem x:Name="btn_menu_nuevosPendientes" Header="Nuevos Pedidos" Click="btn_menu_nuevosPendientes_Click"/>
                     <MenuItem x:Name="btn_menu_acuerdosPendientes" Header="Acuerdos" Click="btn_menu_acuerdosPendientes_Click"/>
                     <MenuItem x:Name="btn_menu_subastasPendientes" Header="Subastas" Click="btn_menu_subastasPendientes_Click"/>
-                    <MenuItem x:Name="btn_menu_despachosPendientes" Header="Despachos"/>
+                    <MenuItem x:Name="btn_menu_despachosPendientes" Header="Despachos" Click="btn_menu_despachosPendientes_Click"/>
                 </MenuItem>
             <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>
             </MenuItem>

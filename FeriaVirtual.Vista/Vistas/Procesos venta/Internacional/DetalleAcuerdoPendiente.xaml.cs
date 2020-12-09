@@ -74,12 +74,9 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     txt_id.Text = procesoVenta.id.ToString();
 
                 }
-
             }
         }
-
      
-
         private void Btn_enviar_propuesta_Click(object sender, RoutedEventArgs e)
         {
             //actualizar a etapa 3 el registro
@@ -118,9 +115,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         }
                         
                     }
-
-                    
-
+                
                     int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
 
                     if (response == -1)
@@ -152,8 +147,6 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     }
                 }
             }
-        }
-
-        
+        }   
     }
 }
