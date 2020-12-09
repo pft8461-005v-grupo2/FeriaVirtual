@@ -19,17 +19,13 @@ using System.Windows.Shapes;
 namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 {
     /// <summary>
-    /// Lógica de interacción para DetalleAcuerdoPendiente.xaml
+    /// Lógica de interacción para DetalleGenerarSubasta.xaml
     /// </summary>
-    public partial class DetalleAcuerdoPendiente : Window
+    public partial class DetalleGenerarSubasta : Window
     {
-        ProcesoVenta procesos_Venta_contexto = new ProcesoVenta();
-        public DetalleAcuerdoPendiente(DataRowView dataRowView)
+        public DetalleGenerarSubasta(DataRowView dataRowView)
         {
             InitializeComponent();
-            //actualizar_tabla_datos_procesoVenta();
-            
-
             if (dataRowView != null)
             {
 
@@ -49,7 +45,8 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
                 Cliente cliente = new Cliente();
                 cliente.id = cliente_id;
-              
+                //ClienteService.consultarCliente(cliente);
+
                 List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
                 cliente = (
@@ -63,7 +60,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                 {
                     procesoVenta = listaProcesoVenta[0];
                     solicitud_Compra = lista_obtenida[0];
-                    txt_solicitud_compra.Text = solicitud_Compra.producto+" kg: "+solicitud_Compra.kilogramos;
+                    txt_solicitud_compra.Text = solicitud_Compra.producto + " kg: " + solicitud_Compra.kilogramos;
                     txt_fechaCreacion.Text = procesoVenta.fechacreacion;
                     txt_precioVentaTotal.Text = procesoVenta.precioventatotal.ToString();
                     txt_precioCostoTotal.Text = procesoVenta.preciocostototal.ToString(); ;
@@ -78,12 +75,8 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             }
         }
 
-     
-
-        private void Btn_enviar_propuesta_Click(object sender, RoutedEventArgs e)
+        private void Btn_enviar_subasta_Click(object sender, RoutedEventArgs e)
         {
-            //actualizar a etapa 3 el registro
-
             ProcesoVenta procesoVenta = new ProcesoVenta();
             procesoVenta.id = Int32.Parse(txt_id.Text);
             List<ProcesoVenta> listaProcesoVenta = ProcesoVentaService.consultar_ProcesoVenta(procesoVenta);
@@ -93,33 +86,8 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             {
                 procesoVenta = listaProcesoVenta[0];
 
-                for (int i = 0; i < listaProcesoVenta.Count; i++)
-                {
-                    int? precioCosto = 0;
-                    int? precioVentaUsuario = 0;
-                    if (txt_precioVentaTotal.Text.Trim() != listaProcesoVenta[i].precioventatotal.ToString())
-                    {
-                        precioCosto = procesoVenta.preciocostototal;
-                        precioVentaUsuario = Int32.Parse(txt_precioVentaTotal.Text.Trim());
-
-                        if (precioVentaUsuario < precioCosto)
-                        {
-                            string mensaje = "El precio de venta debe ser mayor o igual al precio costo ";
-                            string titulo = "Error";
-                            MessageBoxButton tipo = MessageBoxButton.OK;
-                            MessageBoxImage icono = MessageBoxImage.Error;
-                            MessageBox.Show(mensaje, titulo, tipo, icono);
-                            return;
-                            
-                        }
-                        else {
-                            procesoVenta.precioventatotal = Int32.Parse(txt_precioVentaTotal.Text.Trim());
-                            procesoVenta.etapa = 3;
-                        }
-                        
-                    }
-
-                    
+ 
+                    procesoVenta.etapa = 5;
 
                     int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
 
@@ -131,9 +99,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         MessageBoxButton tipo = MessageBoxButton.OK;
                         MessageBoxImage icono = MessageBoxImage.Error;
                         MessageBox.Show(mensaje, titulo, tipo, icono);
-                        this.Close();
-                        
-                        return ;
+                        return;
 
                     }
 
@@ -145,15 +111,11 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         MessageBoxButton tipo = MessageBoxButton.OK;
                         MessageBoxImage icono = MessageBoxImage.Information;
                         MessageBox.Show(mensaje, titulo, tipo, icono);
-                        
-                        this.Close();
                         return;
-                   
+
                     }
-                }
+                
             }
         }
-
-        
     }
 }
