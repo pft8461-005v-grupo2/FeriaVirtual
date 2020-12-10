@@ -41,6 +41,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             tabla_con_datos.Columns.Add("id");
             tabla_con_datos.Columns.Add("identificador");
             tabla_con_datos.Columns.Add("razonsocial");
+            tabla_con_datos.Columns.Add("producto");
             tabla_con_datos.Columns.Add("solicitud_compra_id");
             tabla_con_datos.Columns.Add("subasta_id");
             tabla_con_datos.Columns.Add("etapa");
@@ -69,6 +70,15 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                      select cli
                   ).First();
 
+                Solicitud_compra solicitudCompraABuscar = new Solicitud_compra();
+                solicitudCompraABuscar.id = lista_obtenida[i].solicitud_compra_id;
+                List<Solicitud_compra> lista_solicitudCompra = Solicitud_compraService.solicitud_Compras(solicitudCompraABuscar);
+
+                Solicitud_compra solicitudCompraEncontrado = (
+                    from sc in lista_solicitudCompra
+                    select sc
+                    ).First();
+
                 if (lista_obtenida[i].etapa == 4)
                 {
 
@@ -77,6 +87,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     lista_obtenida[i].id,
                     cliente.identificador,
                     cliente.razonSocial,
+                    solicitudCompraEncontrado.producto,
                     lista_obtenida[i].solicitud_compra_id,
                     lista_obtenida[i].subasta_id,
                     lista_obtenida[i].etapa,
@@ -90,15 +101,15 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                 };
 
 
-                data_AcuerdosPendientes.ItemsSource = tabla_con_datos.AsDataView();
+                data_GenerarSubastas.ItemsSource = tabla_con_datos.AsDataView();
             }
 
         }
 
         private void Btn_ver_detalle_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView dataRowView = data_AcuerdosPendientes.SelectedItem as DataRowView;
-            DetalleGenerarSubasta detalleGenerarSubasta = new DetalleGenerarSubasta(dataRowView);
+            DataRowView dataRowView = data_GenerarSubastas.SelectedItem as DataRowView;
+            DetalleGenerarSubasta detalleGenerarSubasta = new DetalleGenerarSubasta(dataRowView, this);
             detalleGenerarSubasta.Show();
         }
 

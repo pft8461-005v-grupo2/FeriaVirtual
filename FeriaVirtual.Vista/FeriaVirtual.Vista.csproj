@@ -115,9 +115,6 @@
     <Compile Include="Vistas\Procesos venta\Internacional\NuevosPedidos.xaml.cs">
       <DependentUpon>NuevosPedidos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Procesos venta\Internacional\ProcesoVentaInternacional.xaml.cs">
-      <DependentUpon>ProcesoVentaInternacional.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Procesos venta\Internacional\VentaDespachar.xaml.cs">
       <DependentUpon>VentaDespachar.xaml</DependentUpon>
     </Compile>
@@ -218,10 +215,6 @@
     <Page Include="Vistas\Procesos venta\Internacional\NuevosPedidos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Vistas\Procesos venta\Internacional\ProcesoVentaInternacional.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Vistas\Procesos venta\Internacional\VentaDespachar.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -21,11 +21,19 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     /// <summary>
     /// Lógica de interacción para DetalleGenerarSubasta.xaml
     /// </summary>
+    /// 
+   
     public partial class DetalleGenerarSubasta : Window
     {
-        public DetalleGenerarSubasta(DataRowView dataRowView)
+        GenerarSubastas VentanaGenerarSubastasAnterior = null;
+        public DetalleGenerarSubasta(DataRowView dataRowView, GenerarSubastas ventanaGenerarSubastas)
         {
             InitializeComponent();
+
+            if (ventanaGenerarSubastas!=null) {
+                VentanaGenerarSubastasAnterior = ventanaGenerarSubastas;
+            }
+
             if (dataRowView != null)
             {
 
@@ -45,7 +53,6 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
                 Cliente cliente = new Cliente();
                 cliente.id = cliente_id;
-                //ClienteService.consultarCliente(cliente);
 
                 List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
@@ -87,7 +94,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                 procesoVenta = listaProcesoVenta[0];
 
  
-                    procesoVenta.etapa = 8;
+                    procesoVenta.etapa = 5;
 
                     int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
 
@@ -106,11 +113,13 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     if (response > 0)
                     {
 
-                        string mensaje = "actualizado correctamente.";
+                        string mensaje = "Actualizado correctamente.";
                         string titulo = "Información";
                         MessageBoxButton tipo = MessageBoxButton.OK;
                         MessageBoxImage icono = MessageBoxImage.Information;
                         MessageBox.Show(mensaje, titulo, tipo, icono);
+                        VentanaGenerarSubastasAnterior.actualizar_tabla_datos_procesoVenta();
+                        this.Close();
                         return;
 
                     }
