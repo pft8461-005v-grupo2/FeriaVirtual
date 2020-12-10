@@ -33,14 +33,14 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
         private void btn_crearProductor_Click(object sender, RoutedEventArgs e)
         {
-            CrearProductor crearProductor = new CrearProductor();
+            CrearProductor crearProductor = new CrearProductor(this);
             crearProductor.Show();
         }
 
 
         private void btn_editarProductor_Click(object sender, RoutedEventArgs e)
         {
-            EditarProductor editarProductor = new EditarProductor();
+            EditarProductor editarProductor = new EditarProductor(this);
             editarProductor.Show();
         }
 

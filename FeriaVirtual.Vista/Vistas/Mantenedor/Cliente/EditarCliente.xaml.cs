@@ -25,10 +25,16 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
         Usuario usuario_contexto = new Usuario();
         Cliente cliente_contexto = new Cliente();
+        VistaCliente ventanaVistaClienteAnterior = null;
 
-        public EditarCliente()
+        public EditarCliente(VistaCliente ventanaVistaCliente)
         {
             InitializeComponent();
+
+            if (ventanaVistaCliente != null)
+            {
+                ventanaVistaClienteAnterior = ventanaVistaCliente;
+            }
 
             Dictionary<int, string> tipos_de_clientes = new Dictionary<int, string>();
             tipos_de_clientes.Add(1, "Internacional");
@@ -232,6 +238,8 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                 cambiar_estado_textblock(false);
                 reset_ui_textblock();
                 txt_buscar_correo.Focus();
+                ventanaVistaClienteAnterior.actualizar_tabla_datos_cliente();
+                this.Close();
                 return;
             }
 

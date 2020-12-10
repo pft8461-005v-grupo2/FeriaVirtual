@@ -21,8 +21,10 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
     /// <summary>
     /// Lógica de interacción para Cliente.xaml
     /// </summary>
+    
     public partial class VistaCliente : Page
     {
+        
         public VistaCliente()
         {
             InitializeComponent();
@@ -32,13 +34,13 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
         private void btn_crearCliente_Click(object sender, RoutedEventArgs e)
         {
-            CrearCliente crearCliente = new CrearCliente();
+            CrearCliente crearCliente = new CrearCliente(this);
             crearCliente.Show();
         }
 
         private void btn_edtitarCliente_Click(object sender, RoutedEventArgs e)
         {
-            EditarCliente editarCliente = new EditarCliente();
+            EditarCliente editarCliente = new EditarCliente(this);
             editarCliente.Show();
         }
 

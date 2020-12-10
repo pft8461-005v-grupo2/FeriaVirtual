@@ -20,8 +20,8 @@
 
 
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Grid.ColumnSpan="3"/>
-        <Button Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="139,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Grid.ColumnSpan="3" Visibility="Collapsed"/>
+        <Button Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="139,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Grid.ColumnSpan="2" Visibility="Collapsed"/>
         <DataGrid Name="data_productos" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID" Width="50" Visibility="Collapsed" />

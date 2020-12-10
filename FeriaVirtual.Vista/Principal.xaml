@@ -42,7 +42,7 @@
             <MenuItem Header="Procesos Venta ">
                 <!--<MenuItem x:Name="btn_menu_ventaInternacional" Header="Internacional" Click="btn_menu_ventaInternacional_Click">-->
                 <MenuItem x:Name="btn_menu_ventaInternacional" Header="Internacional" >
-                    <MenuItem x:Name="btn_menu_administrarProcesos" Header="Administrar Procesos"/>
+                    <MenuItem x:Name="btn_menu_administrarProcesos" Header="Administrar Procesos" Visibility="Collapsed"/>
                     <MenuItem x:Name="btn_menu_nuevosPendientes" Header="Nuevos Pedidos" Click="btn_menu_nuevosPendientes_Click"/>
                     <MenuItem x:Name="btn_menu_acuerdosPendientes" Header="Acuerdos" Click="btn_menu_acuerdosPendientes_Click"/>
                     <MenuItem x:Name="btn_menu_subastasPendientes" Header="Subastas" Click="btn_menu_subastasPendientes_Click"/>

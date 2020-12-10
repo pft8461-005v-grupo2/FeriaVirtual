@@ -23,14 +23,17 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
     /// </summary>
     public partial class CrearProductor : Window
     {
-        public CrearProductor()
+        VistaProductor ventanVistaProductorAnterior = null;
+        public CrearProductor(VistaProductor VentanaVistaProductor)
         {
             InitializeComponent();
+            if (VentanaVistaProductor != null)
+            {
+                ventanVistaProductorAnterior = VentanaVistaProductor;
+            }
+
         }
 
-      
-
-       
 
         private void btn_crear_productor_Click(object sender, RoutedEventArgs e)
         {
@@ -63,6 +66,8 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                 MessageBoxButton tipo = MessageBoxButton.OK;
                 MessageBoxImage icono = MessageBoxImage.Information;
                 MessageBox.Show(mensaje, titulo, tipo, icono);
+                ventanVistaProductorAnterior.actualizar_tabla_datos_productor();
+                this.Close();
                 return;
             }
         }

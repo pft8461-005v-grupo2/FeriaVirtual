@@ -24,9 +24,14 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor.Productos
     {
 
         Producto producto_contexto = new Producto();
-        public EditarProducto()
+        VistaProductos VentanaVistaProductosAnterior = null;
+        public EditarProducto(VistaProductos VentanaVistaProductos)
         {
             InitializeComponent();
+            if (VentanaVistaProductos != null)
+            {
+                VentanaVistaProductosAnterior = VentanaVistaProductos;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -69,6 +74,8 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor.Productos
                 cambiar_estado_textblock(false);
                 reset_ui_textblock();
                 txt_buscar_descripcion.Focus();
+                VentanaVistaProductosAnterior.actualizar_tabla_datos_productos();
+                this.Close();
                 return;
 
             }

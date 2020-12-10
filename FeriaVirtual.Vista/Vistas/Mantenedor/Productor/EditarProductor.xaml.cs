@@ -24,9 +24,14 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
     {
         Usuario usuario_contexto = new Usuario();
         Productor productor_contexto = new Productor();
-        public EditarProductor()
+        VistaProductor ventanVistaProductorAnterior = null;
+        public EditarProductor(VistaProductor VentanaVistaProductor)
         {
             InitializeComponent();
+            if (VentanaVistaProductor != null)
+            {
+                ventanVistaProductorAnterior = VentanaVistaProductor;
+            }
         }
 
         private void btn_buscar_productor_Click(object sender, RoutedEventArgs e)
@@ -193,6 +198,8 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                 cambiar_estado_textblock(false);
                 reset_ui_textblock();
                 txt_buscar_correo.Focus();
+                ventanVistaProductorAnterior.actualizar_tabla_datos_productor();
+                this.Close();
                 return;
 
             }
