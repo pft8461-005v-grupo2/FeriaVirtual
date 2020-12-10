@@ -41,6 +41,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             tabla_con_datos.Columns.Add("id");
             tabla_con_datos.Columns.Add("identificador");
             tabla_con_datos.Columns.Add("razonsocial");
+            tabla_con_datos.Columns.Add("producto");
             tabla_con_datos.Columns.Add("solicitud_compra_id");
             tabla_con_datos.Columns.Add("subasta_id");
             tabla_con_datos.Columns.Add("etapa");
@@ -71,6 +72,15 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                   ).First();
 
 
+                Solicitud_compra solicitudCompraABuscar = new Solicitud_compra();
+                solicitudCompraABuscar.id = lista_obtenida[i].solicitud_compra_id;
+                List<Solicitud_compra> lista_solicitudCompra = Solicitud_compraService.solicitud_Compras(solicitudCompraABuscar);
+
+                Solicitud_compra solicitudCompraEncontrado = (
+                    from sc in lista_solicitudCompra
+                    select sc
+                    ).First();
+
 
                 if (lista_obtenida[i].etapa == 2)
                     {
@@ -80,6 +90,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         lista_obtenida[i].id,
                         cliente.identificador,
                         cliente.razonSocial,
+                        solicitudCompraEncontrado.producto,
                         lista_obtenida[i].solicitud_compra_id,
                         lista_obtenida[i].subasta_id,
                         lista_obtenida[i].etapa,

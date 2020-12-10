@@ -23,9 +23,16 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     public partial class DetalleNuevosPedidos : Window
     {
         private int? solicitudCompraContexto = -1;
-        public DetalleNuevosPedidos(DataRowView dataRowView)
+        NuevosPedidos ventanaNuevosPedidosAnterior = null;
+
+        public DetalleNuevosPedidos(DataRowView dataRowView, NuevosPedidos ventanaPedidos)
         {
             InitializeComponent();
+
+            if( ventanaPedidos != null)
+            {
+                ventanaNuevosPedidosAnterior = ventanaPedidos;
+            }
 
             if (dataRowView != null)
             {
@@ -93,14 +100,17 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                 case 1:
                     mensaje = "Se inició el proceso de venta, pero no hay stock del producto seleccionado";
                     icono = MessageBoxImage.Warning;
+                    ventanaNuevosPedidosAnterior.actualizar_tabla_datos_NuevosPedidos();
                     break;
                 case 2:
                     mensaje = "Se inició el proceso de venta, pero el stock es insuficiente";
                     icono = MessageBoxImage.Warning;
+                    ventanaNuevosPedidosAnterior.actualizar_tabla_datos_NuevosPedidos();
                     break;
                 case 3:
                     mensaje = "Se inició el proceso de venta correctamente";
                     icono = MessageBoxImage.Information;
+                    ventanaNuevosPedidosAnterior.actualizar_tabla_datos_NuevosPedidos();
                     break;
                 default:
                     mensaje = "Error no tratado";
