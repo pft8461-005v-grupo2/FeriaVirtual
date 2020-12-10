@@ -23,8 +23,8 @@
 
 
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Grid.ColumnSpan="3"/>
-        <Button Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="139,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396" Grid.ColumnSpan="3" Visibility="Collapsed"/>
+        <Button Content="Buscar" Grid.Column="2" HorizontalAlignment="Left" Margin="139,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Grid.ColumnSpan="2" Visibility="Collapsed"/>
         <DataGrid Name="data_clientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="300" Margin="10,102,0,0" VerticalAlignment="Top" Width="780" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID" Width="50" Visibility="Collapsed" />
@@ -42,6 +42,6 @@
         <Button Content="Crear" Grid.Column="3" HorizontalAlignment="Left" Margin="144,48,0,0" VerticalAlignment="Top" Width="85" Height="23" Click="btn_crearCliente_Click" Grid.ColumnSpan="2"/>
         <Button Content="Modificar" Grid.Column="4" HorizontalAlignment="Left" Margin="82,48,0,0" VerticalAlignment="Top" Width="76" Height="23" Click="btn_edtitarCliente_Click"/>
         <Label Content="Cliente" Grid.Column="2" HorizontalAlignment="Left" Margin="46,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182" FontWeight="Bold" FontSize="18" Height="34"/>
-        <Button Content="Refrescar" Grid.Column="3" HorizontalAlignment="Left" Margin="64,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_refrescar_Click"/>
+        <Button Content="Refrescar" Grid.Column="3" HorizontalAlignment="Left" Margin="64,48,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btn_refrescar_Click" Visibility="Collapsed"/>
     </Grid>
 </Page>

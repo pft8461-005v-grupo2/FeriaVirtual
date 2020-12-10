@@ -22,9 +22,16 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     /// </summary>
     public partial class DetalleVentaDespachar : Window
     {
-        public DetalleVentaDespachar( DataRowView dataRowView)
+        VentaDespachar ventanaVentaDespacharAnterior = null;
+        public DetalleVentaDespachar( DataRowView dataRowView, VentaDespachar ventanaVentaDespachar)
         {
             InitializeComponent();
+
+            if (ventanaVentaDespachar!=null) {
+
+                ventanaVentaDespacharAnterior = ventanaVentaDespachar;
+            }
+
             if (dataRowView != null)
             {
 
@@ -44,8 +51,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
                 Cliente cliente = new Cliente();
                 cliente.id = cliente_id;
-                //ClienteService.consultarCliente(cliente);
-
+           
                 List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
                 cliente = (
@@ -74,7 +80,9 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             }
         }
 
-        private void Btn_enviar_subasta_Click(object sender, RoutedEventArgs e)
+       
+
+        private void Btn_enviar_despacho_Click(object sender, RoutedEventArgs e)
         {
             ProcesoVenta procesoVenta = new ProcesoVenta();
             procesoVenta.id = Int32.Parse(txt_id.Text);
@@ -110,6 +118,8 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     MessageBoxButton tipo = MessageBoxButton.OK;
                     MessageBoxImage icono = MessageBoxImage.Information;
                     MessageBox.Show(mensaje, titulo, tipo, icono);
+                    ventanaVentaDespacharAnterior.actualizar_tabla_datos_procesoVenta();
+                    this.Close();
                     return;
 
                 }

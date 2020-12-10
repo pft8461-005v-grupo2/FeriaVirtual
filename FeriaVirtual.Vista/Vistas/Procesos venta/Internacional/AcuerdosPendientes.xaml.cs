@@ -112,9 +112,8 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
         private void Btn_ver_detalle_Click(object sender, RoutedEventArgs e)
         {
             DataRowView dataRowView = data_AcuerdosPendientes.SelectedItem as DataRowView;
-            DetalleAcuerdoPendiente detalleAcuerdoPendiente = new DetalleAcuerdoPendiente(dataRowView);
+            DetalleAcuerdoPendiente detalleAcuerdoPendiente = new DetalleAcuerdoPendiente(dataRowView, this);
             detalleAcuerdoPendiente.Show();
-           
         }
     }
 }
