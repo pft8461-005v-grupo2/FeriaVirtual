@@ -42,6 +42,6 @@
         <Button Content="Crear " Grid.Column="4" HorizontalAlignment="Left" Margin="18,48,0,0" VerticalAlignment="Top" Width="62" Height="23" Click="btn_crearTransportista_Click"/>
         <Button Content="Modificar" Grid.Column="4" HorizontalAlignment="Left" Margin="85,48,0,0" VerticalAlignment="Top" Width="73" RenderTransformOrigin="0.338,0.392" Click="btn_editarTransportista_Click" Height="23"/>
         <Label Content="Transportista" Grid.Column="2" HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182" FontSize="18" FontWeight="Bold"/>
-        <Button Content="Refrescar" Grid.Column="3" HorizontalAlignment="Left" Margin="90,48,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Height="22" Click="Btn_refrescar_Click"/>
+        <Button Content="Refrescar" Grid.Column="3" HorizontalAlignment="Left" Margin="90,48,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Height="22" Click="Btn_refrescar_Click" Visibility="Collapsed"/>
     </Grid>
 </Page>

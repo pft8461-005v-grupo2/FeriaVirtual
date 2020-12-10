@@ -23,9 +23,14 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
     /// </summary>
     public partial class CrearTransportista : Window
     {
-        public CrearTransportista()
+        VistaTransportista VentanaVistaTransportistaAnterior = null;
+        public CrearTransportista(VistaTransportista VentaVistaTransportista)
         {
             InitializeComponent();
+
+            if (VentaVistaTransportista!=null) {
+                VentanaVistaTransportistaAnterior = VentaVistaTransportista;
+            }
         }
 
        
@@ -62,6 +67,8 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                 MessageBoxButton tipo = MessageBoxButton.OK;
                 MessageBoxImage icono = MessageBoxImage.Information;
                 MessageBox.Show(mensaje, titulo, tipo, icono);
+                VentanaVistaTransportistaAnterior.actualizar_tabla_datos_transportista();
+                this.Close();
                 return;
             }
 

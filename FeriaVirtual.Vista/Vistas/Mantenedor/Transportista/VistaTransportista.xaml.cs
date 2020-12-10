@@ -31,7 +31,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
         private void btn_crearTransportista_Click(object sender, RoutedEventArgs e)
         {
-            CrearTransportista crearTransportista = new CrearTransportista();
+            CrearTransportista crearTransportista = new CrearTransportista(this);
             crearTransportista.Show();
         }
 
@@ -84,7 +84,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
 
         private void btn_editarTransportista_Click(object sender, RoutedEventArgs e)
         {
-            EditarTransportista editarTransportista = new EditarTransportista();
+            EditarTransportista editarTransportista = new EditarTransportista(this);
             editarTransportista.Show();
         }
 

@@ -23,9 +23,15 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
     /// </summary>
     public partial class CrearCliente : Window
     {
-        public CrearCliente()
+        VistaCliente ventanaVistaClienteAnterior = null;
+        public CrearCliente(VistaCliente ventanaVistaCliente)
         {
             InitializeComponent();
+
+            if (ventanaVistaCliente != null)
+            {
+                ventanaVistaClienteAnterior = ventanaVistaCliente;
+            }
 
             Dictionary<int, string> tipos_de_clientes = new Dictionary<int, string>();
             tipos_de_clientes.Add(1, "Internacional");
@@ -82,6 +88,8 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                     MessageBoxButton tipo = MessageBoxButton.OK;
                     MessageBoxImage icono = MessageBoxImage.Information;
                     MessageBox.Show(mensaje, titulo, tipo, icono);
+                    ventanaVistaClienteAnterior.actualizar_tabla_datos_cliente();
+                    this.Close();
                     return;
                 }
             }

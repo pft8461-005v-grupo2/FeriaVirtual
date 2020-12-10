@@ -24,9 +24,14 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
     {
         Usuario usuario_contexto = new Usuario();
         Transportista transportistaContexto = new Transportista();
-        public EditarTransportista()
+        VistaTransportista VentanaVistaTransportistaAnterior = null;
+        public EditarTransportista(VistaTransportista VentaVistaTransportista)
         {
             InitializeComponent();
+            if (VentaVistaTransportista != null)
+            {
+                VentanaVistaTransportistaAnterior = VentaVistaTransportista;
+            }
         }
 
         private void btn_buscar_transportista_Click(object sender, RoutedEventArgs e)
@@ -197,6 +202,8 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                 cambiar_estado_textblock(false);
                 reset_ui_textblock();
                 txt_buscar_correo.Focus();
+                VentanaVistaTransportistaAnterior.actualizar_tabla_datos_transportista();
+                this.Close();
                 return;
 
             }
