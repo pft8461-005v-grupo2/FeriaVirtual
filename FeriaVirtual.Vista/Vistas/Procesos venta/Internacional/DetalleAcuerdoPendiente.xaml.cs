@@ -23,12 +23,18 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
     /// </summary>
     public partial class DetalleAcuerdoPendiente : Window
     {
-        ProcesoVenta procesos_Venta_contexto = new ProcesoVenta();
-        public DetalleAcuerdoPendiente(DataRowView dataRowView)
+        //ProcesoVenta procesos_Venta_contexto = new ProcesoVenta();
+
+        AcuerdosPendientes ventanaAcuerdosPendientesAnterior = null;
+        public DetalleAcuerdoPendiente(DataRowView dataRowView, AcuerdosPendientes ventanaAcuerdosPendientes)
         {
             InitializeComponent();
-            //actualizar_tabla_datos_procesoVenta();
             
+
+            if (ventanaAcuerdosPendientes != null)
+            {
+                ventanaAcuerdosPendientesAnterior = ventanaAcuerdosPendientes;
+            }
 
             if (dataRowView != null)
             {
@@ -111,12 +117,14 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         }
                         else {
                             procesoVenta.precioventatotal = Int32.Parse(txt_precioVentaTotal.Text.Trim());
-                            procesoVenta.etapa = 3;
+                            
                         }
                         
                     }
-                
+
+                    procesoVenta.etapa = 3;
                     int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
+                    
 
                     if (response == -1)
                     {
@@ -126,8 +134,6 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         MessageBoxButton tipo = MessageBoxButton.OK;
                         MessageBoxImage icono = MessageBoxImage.Error;
                         MessageBox.Show(mensaje, titulo, tipo, icono);
-                        this.Close();
-                        
                         return ;
 
                     }
@@ -140,7 +146,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         MessageBoxButton tipo = MessageBoxButton.OK;
                         MessageBoxImage icono = MessageBoxImage.Information;
                         MessageBox.Show(mensaje, titulo, tipo, icono);
-                        
+                        ventanaAcuerdosPendientesAnterior.actualizar_tabla_datos_procesoVenta();
                         this.Close();
                         return;
                    
