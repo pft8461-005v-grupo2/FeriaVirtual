@@ -95,7 +95,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DataRowView dataRowView = data_NuevoPedidos.SelectedItem as DataRowView;
-            DetalleNuevosPedidos detalleNuevoP = new DetalleNuevosPedidos(dataRowView);
+            DetalleNuevosPedidos detalleNuevoP = new DetalleNuevosPedidos(dataRowView, this);
             detalleNuevoP.Show();
 
         }
