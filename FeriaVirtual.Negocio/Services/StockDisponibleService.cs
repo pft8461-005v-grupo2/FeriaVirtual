@@ -17,10 +17,27 @@ namespace FeriaVirtual.Negocio.Services
         public static List<StockDisponible> stockDisponibles_consultar()
         {
             RestClient client = new RestClient(Endpoints.SERVER);
-            RestRequest request = new RestRequest(Endpoints.stock_disponible_iniciar, Method.POST);
+            RestRequest request = new RestRequest(Endpoints.stock_disponible_consultar, Method.POST);
 
 
             string data = JsonConvert.SerializeObject(new Solicitud_compra());
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            List<StockDisponible> lista_StockDisponible = JsonConvert.DeserializeObject<List<StockDisponible>>(response.Content);
+
+
+            return lista_StockDisponible != null ? lista_StockDisponible : new List<StockDisponible>(); ;
+        }
+
+        public static List<StockDisponible> stockDisponibles_consultar(StockDisponible stockDisponible)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.stock_disponible_consultar, Method.POST);
+
+
+            string data = JsonConvert.SerializeObject(stockDisponible);
             request.AddJsonBody(data);
 
             IRestResponse response = client.Execute(request);

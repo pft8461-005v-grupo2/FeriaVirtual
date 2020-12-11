@@ -111,6 +111,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     mensaje = "Se inició el proceso de venta correctamente";
                     icono = MessageBoxImage.Information;
                     ventanaNuevosPedidosAnterior.actualizar_tabla_datos_NuevosPedidos();
+                    this.Close();
                     break;
                 default:
                     mensaje = "Error no tratado";

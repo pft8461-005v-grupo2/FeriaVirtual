@@ -25,7 +25,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
    
     public partial class DetalleGenerarSubasta : Window
     {
-        private int? subastaContexto = -1;
+        //private int? subastaContexto = -1;
 
         GenerarSubastas VentanaGenerarSubastasAnterior = null;
         public DetalleGenerarSubasta(DataRowView dataRowView, GenerarSubastas ventanaGenerarSubastas)
