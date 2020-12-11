@@ -73,7 +73,6 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Nacional
             MessageBoxImage icono = MessageBoxImage.Information;
             switch (respuesta)
             {
-
                 case -1:
                     mensaje = "Error de sistema. Contacta con el administrador de sistema";
                     icono = MessageBoxImage.Error;
