@@ -29,7 +29,7 @@
                 <DataGridTextColumn Binding="{Binding Path=fechacreacion}" Header="Fecha creacion" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=producto}" Header="Producto" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=kilogramos}" Header="Kilogramos " Width="*" />
-                <DataGridTextColumn Binding="{Binding Path=habilitado}" Header="Habilitado " Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=habilitado}" Header="Habilitado " Width="*" Visibility="Collapsed" />
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

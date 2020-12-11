@@ -262,14 +262,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\FeriaVirtual.Negocio\FeriaVirtual.Negocio.csproj">
       <Project>{20d5d37c-577f-4d64-9a93-ccba99fa08c3}</Project>
       <Name>FeriaVirtual.Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\frutas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

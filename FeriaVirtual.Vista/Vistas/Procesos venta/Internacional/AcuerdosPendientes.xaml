@@ -23,12 +23,13 @@
         
         <Label Content="Acuerdos pendientes para enviar" Grid.Column="1" HorizontalAlignment="Left" Margin="81,3,0,0" VerticalAlignment="Top" Width="289" FontSize="18" Grid.ColumnSpan="3"/>
 
-        <DataGrid Name="data_AcuerdosPendientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="413" Margin="0,37,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
+        <DataGrid Name="data_AcuerdosPendientes" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="auto" Margin="20,37,20,0" VerticalAlignment="Top" Width="760" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=id}" Header="Pedido" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=identificador}" Header="Idenficador" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=razonsocial}" Header="Razon social" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=producto}" Header="Producto" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=kilogramos}" Header="Kilogramos" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=solicitud_compra_id}" Header="Solicitud compra id" Width="*" Visibility="Collapsed" />
                 <DataGridTextColumn Binding="{Binding Path=subasta_id}" Header="Subasta id" Width="*" Visibility="Collapsed"/>
                 <DataGridTextColumn Binding="{Binding Path=etapa}" Header="Etapa" Width="*" Visibility="Collapsed"/>

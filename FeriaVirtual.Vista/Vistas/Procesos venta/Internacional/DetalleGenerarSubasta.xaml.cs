@@ -31,7 +31,10 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
         public DetalleGenerarSubasta(DataRowView dataRowView, GenerarSubastas ventanaGenerarSubastas)
         {
             InitializeComponent();
-            
+
+            dpk_fechaTermino.SelectedDate = DateTime.Now;
+
+
             if (ventanaGenerarSubastas!=null) {
                 VentanaGenerarSubastasAnterior = ventanaGenerarSubastas;
             }
