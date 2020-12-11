@@ -48,7 +48,7 @@
                     <MenuItem x:Name="btn_menu_subastasPendientes" Header="Subastas" Click="btn_menu_subastasPendientes_Click"/>
                     <MenuItem x:Name="btn_menu_despachosPendientes" Header="Despachos" Click="btn_menu_despachosPendientes_Click"/>
                 </MenuItem>
-            <!--<MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>-->
+                <!--<MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>-->
                 <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional">
                     <MenuItem x:Name="btn_stockDisponible" Header="Stock disponible" Click="btn_menu_stockDisponible_Click"/>
                 </MenuItem>
@@ -56,6 +56,9 @@
 
         </Menu>
         <Frame NavigationUIVisibility="Hidden" x:Name="frameAdm" Content="" HorizontalAlignment="Stretch" Height="428" VerticalAlignment="Top" Margin="0,18,-14,0" Grid.ColumnSpan="6"/>
+        <Label Name="titulo" Content="Bienvenidos a Feria Virtual" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,68,0,0" Grid.ColumnSpan="5" Width="312" Height="61" FontSize="24" FontWeight="Bold"/>
+        <Label Name="descripcion" Content="Por favor navega entre las opciones disponibles que tenemos para ti.&#xD;&#xA;Recuerda consultar el manual de administrador del sistema para cualquier &#xD;&#xA;consulta que tengas." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,129,0,0" Grid.ColumnSpan="6" Height="106" Width="443"/>
+        <Image Name="imagen_principal" Grid.Column="5" HorizontalAlignment="Left" Height="263" Margin="10,68,0,0" VerticalAlignment="Top" Width="304" MaxWidth="500" MaxHeight="500" Source="images/frutas.png"/>
 
 
     </Grid>

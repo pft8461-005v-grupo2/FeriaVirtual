@@ -82,9 +82,9 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                     lista_obtenida[i].direccion,
                     lista_obtenida[i].ciudad,
                     lista_obtenida[i].pais_origen,
-                    lista_obtenida[i].tipo_cliente,
+                    lista_obtenida[i].tipo_cliente == 1 ? "Internacional" : "Nacional" ,
                     lista_obtenida[i].correo,
-                    lista_obtenida[i].habilitado
+                    lista_obtenida[i].habilitado == 1 ? "Si" : "No"
                     );
             }
 

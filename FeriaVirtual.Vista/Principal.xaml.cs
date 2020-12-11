@@ -43,54 +43,71 @@ namespace FeriaVirtual.Vista
 
         private void btn_menu_ventanacional_Click(object sender, RoutedEventArgs e)
         {
-            
+            deshabilitar_textos_principales();
              frameAdm.Content = new Vistas.Procesos_venta.Nacional.ProcesoVentaNacional();
         }
 
 
         private void btn_menu_cliente_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Mantenedor.VistaCliente();
         }
 
         private void btn_menu_producto_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Mantenedor.VistaProductor();
         }
 
         private void btn_menu_transportista_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Mantenedor.VistaTransportista();
         }
 
         private void btn_menu_nuevosPendientes_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Procesos_venta.Internacional.NuevosPedidos();
         }
 
         private void btn_menu_acuerdosPendientes_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Procesos_venta.Internacional.AcuerdosPendientes();
         }
 
         private void btn_menu_productos_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Mantenedor.Productos.VistaProductos();
         }
 
         private void btn_menu_subastasPendientes_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Procesos_venta.Internacional.GenerarSubastas();
         }
 
         private void btn_menu_despachosPendientes_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Procesos_venta.Internacional.VentaDespachar();
         }
 
         private void btn_menu_stockDisponible_Click(object sender, RoutedEventArgs e)
         {
+            deshabilitar_textos_principales();
             frameAdm.Content = new Vistas.Procesos_venta.Nacional.VistaStockDisponible();
         }
+
+        private void deshabilitar_textos_principales()
+        {
+            titulo.Visibility = Visibility.Hidden;
+            descripcion.Visibility = Visibility.Hidden;
+            imagen_principal.Visibility = Visibility.Hidden;
+        }
+
     }
 }

@@ -67,7 +67,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor.Productos
 
                     lista_obtenida[i].id,
                     lista_obtenida[i].descripcion,
-                    lista_obtenida[i].habilitado
+                    lista_obtenida[i].habilitado == 1 ? "Si" : "No"
 
                     );
             }
