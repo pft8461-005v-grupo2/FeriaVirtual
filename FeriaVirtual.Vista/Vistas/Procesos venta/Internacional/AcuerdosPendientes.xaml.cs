@@ -42,6 +42,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             tabla_con_datos.Columns.Add("identificador");
             tabla_con_datos.Columns.Add("razonsocial");
             tabla_con_datos.Columns.Add("producto");
+            tabla_con_datos.Columns.Add("kilogramos");
             tabla_con_datos.Columns.Add("solicitud_compra_id");
             tabla_con_datos.Columns.Add("subasta_id");
             tabla_con_datos.Columns.Add("etapa");
@@ -91,6 +92,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                         cliente.identificador,
                         cliente.razonSocial,
                         solicitudCompraEncontrado.producto,
+                        solicitudCompraEncontrado.kilogramos,
                         lista_obtenida[i].solicitud_compra_id,
                         lista_obtenida[i].subasta_id,
                         lista_obtenida[i].etapa,

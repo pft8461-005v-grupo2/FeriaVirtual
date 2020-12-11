@@ -77,7 +77,7 @@ namespace FeriaVirtual.Vista.Vistas.Mantenedor
                     lista_obtenida[i].direccion,
                     lista_obtenida[i].comuna,
                     lista_obtenida[i].correo,
-                    lista_obtenida[i].habilitado
+                    lista_obtenida[i].habilitado == 1 ? "Si" : "No"
 
                     );
             }

@@ -42,13 +42,15 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
             tabla_con_datos.Columns.Add("identificador");
             tabla_con_datos.Columns.Add("razonsocial");
             tabla_con_datos.Columns.Add("producto");
+            tabla_con_datos.Columns.Add("kilogramos");
             tabla_con_datos.Columns.Add("solicitud_compra_id");
             tabla_con_datos.Columns.Add("subasta_id");
             tabla_con_datos.Columns.Add("etapa");
             tabla_con_datos.Columns.Add("fechacreacion");
             tabla_con_datos.Columns.Add("clienteaceptaacuerdo");
-            tabla_con_datos.Columns.Add("precioventatotal");
             tabla_con_datos.Columns.Add("preciocostototal");
+            tabla_con_datos.Columns.Add("precioventatotal");
+            
 
             Solicitud_compra solicitud_Compra = new Solicitud_compra();
             List<Solicitud_compra> listaSolicitudCompra = Solicitud_compraService.solicitud_Compras(solicitud_Compra);
@@ -88,15 +90,14 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     cliente.identificador,
                     cliente.razonSocial,
                     solicitudCompraEncontrado.producto,
+                    solicitudCompraEncontrado.kilogramos,
                     lista_obtenida[i].solicitud_compra_id,
                     lista_obtenida[i].subasta_id,
                     lista_obtenida[i].etapa,
                     lista_obtenida[i].fechacreacion,
                     lista_obtenida[i].clienteaceptaacuerdo,
-                    lista_obtenida[i].precioventatotal,
-                    lista_obtenida[i].preciocostototal
-
-
+                    lista_obtenida[i].preciocostototal,
+                    lista_obtenida[i].precioventatotal
                     );
                 };
 

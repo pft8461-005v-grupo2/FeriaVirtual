@@ -20,9 +20,9 @@
         </Grid.ColumnDefinitions>
 
 
-        <Label Content="Venta Despacho" Grid.Column="1" HorizontalAlignment="Left" Margin="81,3,0,0" VerticalAlignment="Top" Width="289" FontSize="18" Grid.ColumnSpan="3"/>
+        <Label Content="Pedidos listos para despacho" Grid.Column="1" HorizontalAlignment="Left" Margin="116,3,0,0" VerticalAlignment="Top" Width="249" FontSize="18" Grid.ColumnSpan="3"/>
 
-        <DataGrid Name="data_VentaDespacho" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="413" Margin="0,37,0,0" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
+        <DataGrid Name="data_VentaDespacho" AutoGenerateColumns="false" HorizontalAlignment="Left" Height="auto" Margin="20,37,20,0" VerticalAlignment="Top" Width="760" Grid.ColumnSpan="5" IsReadOnly="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserSortColumns="False" SelectionMode="Single" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=id}" Header="Pedido" Width="*" />
                 <DataGridTextColumn Binding="{Binding Path=identificador}" Header="Idenficador" Width="*" />
