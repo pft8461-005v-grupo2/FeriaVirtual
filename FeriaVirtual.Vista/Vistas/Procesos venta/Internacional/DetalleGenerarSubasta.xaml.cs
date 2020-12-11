@@ -25,11 +25,13 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
    
     public partial class DetalleGenerarSubasta : Window
     {
+        private int? subastaContexto = -1;
+
         GenerarSubastas VentanaGenerarSubastasAnterior = null;
         public DetalleGenerarSubasta(DataRowView dataRowView, GenerarSubastas ventanaGenerarSubastas)
         {
             InitializeComponent();
-
+            
             if (ventanaGenerarSubastas!=null) {
                 VentanaGenerarSubastasAnterior = ventanaGenerarSubastas;
             }
@@ -45,6 +47,8 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                 Solicitud_compra solicitud_Compra = new Solicitud_compra();
                 solicitud_Compra.id = Int32.Parse(dataRowView.Row["solicitud_compra_id"] as string);
                 List<Solicitud_compra> lista_obtenida = Solicitud_compraService.solicitud_Compras(solicitud_Compra);
+
+                
 
                 int? cliente_id = (
                      from sol in lista_obtenida
@@ -62,6 +66,8 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                      select cli
                   ).First();
 
+
+
                 if (listaProcesoVenta != null && listaProcesoVenta.Count == 1)
 
                 {
@@ -76,6 +82,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
                     txt_correo.Text = cliente.correo;
                     txt_paisOrigen.Text = cliente.pais_origen;
                     txt_id.Text = procesoVenta.id.ToString();
+                    
 
                 }
 
@@ -84,47 +91,48 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
         private void Btn_enviar_subasta_Click(object sender, RoutedEventArgs e)
         {
-            ProcesoVenta procesoVenta = new ProcesoVenta();
-            procesoVenta.id = Int32.Parse(txt_id.Text);
-            List<ProcesoVenta> listaProcesoVenta = ProcesoVentaService.consultar_ProcesoVenta(procesoVenta);
+            
+            Subasta subasta = new Subasta();
+            subasta.id= Int32.Parse(txt_id.Text);
 
-            if (listaProcesoVenta != null)
+            string selectDateAsString = dpk_fechaTermino.SelectedDate.Value.ToString("dd-MM-yyyy");
 
+            subasta.fechatermino = dpk_fechaTermino.SelectedDate;
+
+            
+            int? respuesta = SubastaService.iniciarSubastaInter(subasta);
+
+            String mensaje = "";
+            MessageBoxImage icono = MessageBoxImage.Information;
+            switch (respuesta)
             {
-                procesoVenta = listaProcesoVenta[0];
+                case -2:
+                    mensaje = "Proceso de venta esta en una etapa no habilitada para iniciar subasta";
+                    icono = MessageBoxImage.Error;
+                    break;
+                case -1:
+                    mensaje = "Error de sistema. Contacta con el administrador de sistema";
+                    icono = MessageBoxImage.Error;
+                    break;
+                case 1:
+                    mensaje = "Subasta iniciada";
+                    icono = MessageBoxImage.Warning;
+                    VentanaGenerarSubastasAnterior.actualizar_tabla_datos_procesoVenta();
+                    this.Close();
+                    break;
 
- 
-                    procesoVenta.etapa = 5;
-
-                    int response = ProcesoVentaService.actualizarProcesoVenta(procesoVenta);
-
-                    if (response == -1)
-                    {
-
-                        string mensaje = "No se pudo actualizar ";
-                        string titulo = "Error";
-                        MessageBoxButton tipo = MessageBoxButton.OK;
-                        MessageBoxImage icono = MessageBoxImage.Error;
-                        MessageBox.Show(mensaje, titulo, tipo, icono);
-                        return;
-
-                    }
-
-                    if (response > 0)
-                    {
-
-                        string mensaje = "Actualizado correctamente.";
-                        string titulo = "Información";
-                        MessageBoxButton tipo = MessageBoxButton.OK;
-                        MessageBoxImage icono = MessageBoxImage.Information;
-                        MessageBox.Show(mensaje, titulo, tipo, icono);
-                        VentanaGenerarSubastasAnterior.actualizar_tabla_datos_procesoVenta();
-                        this.Close();
-                        return;
-
-                    }
-                
+                default:
+                    mensaje = "Error no tratado";
+                    break;
             }
+
+            string titulo = "Información";
+            MessageBoxButton tipo = MessageBoxButton.OK;
+            MessageBox.Show(mensaje, titulo, tipo, icono);
+            this.Close();
+            return;
+
         }
+        
     }
 }
