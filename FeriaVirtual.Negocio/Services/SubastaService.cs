@@ -47,5 +47,23 @@ namespace FeriaVirtual.Negocio.Services
 
             return lista_subasta_response != null ? lista_subasta_response : new List<Subasta>(); ;
         }
+
+        public static int? iniciarSubastaInter(Subasta subasta)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.procesoSubasta_inter_iniciar, Method.POST);
+
+            string data = JsonConvert.SerializeObject(subasta);
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            int? response_object = JsonConvert.DeserializeObject<int?>(response.Content);
+
+            return response_object;
+
+        }
+
+
     }
 }
