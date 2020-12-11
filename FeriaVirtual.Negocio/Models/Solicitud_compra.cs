@@ -11,8 +11,8 @@ namespace FeriaVirtual.Negocio.Models
         
         public int? id { get; set; } // ? para dejar en null un int
         public int? cliente_id { get; set; }
-        public String fechacreacion { get; set; }
-        public String producto { get; set; }
+        public string fechacreacion { get; set; }
+        public string producto { get; set; }
         public int? kilogramos { get; set; }
         public int? habilitado { get; set; }
 

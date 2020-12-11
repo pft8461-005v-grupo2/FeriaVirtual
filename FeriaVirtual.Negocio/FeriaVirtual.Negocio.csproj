@@ -72,6 +72,7 @@
     <Compile Include="Models\Productor.cs" />
     <Compile Include="Models\ResponseObject.cs" />
     <Compile Include="Models\Solicitud_compra.cs" />
+    <Compile Include="Models\StockDisponible.cs" />
     <Compile Include="Models\Subasta.cs" />
     <Compile Include="Models\Transportista.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Services\ProductorService.cs" />
     <Compile Include="Services\ProductoService.cs" />
     <Compile Include="Services\Solicitud_compraService.cs" />
+    <Compile Include="Services\StockDisponibleService.cs" />
     <Compile Include="Services\SubastaService.cs" />
     <Compile Include="Services\TransportistaService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
