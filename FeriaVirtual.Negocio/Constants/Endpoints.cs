@@ -36,5 +36,7 @@ namespace FeriaVirtual.Negocio.Constants
 
         // Gestiones
         public const string procesoVenta_iniciar = "/proceso-internacional/iniciar-proceso";
+        public const string procesoSubasta_inter_iniciar = "/proceso-internacional/iniciar-subasta";
+        public const string stock_disponible_iniciar = "/consulta-stock-disponible";
     }
 }

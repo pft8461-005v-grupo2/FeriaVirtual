@@ -9,7 +9,7 @@ namespace FeriaVirtual.Negocio.Models
     public class Subasta
     {
         public int? id { get; set; }
-        public String fechatermino { get; set; }
+        public DateTime? fechatermino { get; set; }
         public int? precioganador { get; set; }
         public int? habilitado { get; set; }
     }
