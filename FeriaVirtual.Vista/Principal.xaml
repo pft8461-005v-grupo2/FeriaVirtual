@@ -48,9 +48,12 @@
                     <MenuItem x:Name="btn_menu_subastasPendientes" Header="Subastas" Click="btn_menu_subastasPendientes_Click"/>
                     <MenuItem x:Name="btn_menu_despachosPendientes" Header="Despachos" Click="btn_menu_despachosPendientes_Click"/>
                 </MenuItem>
-            <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>
+            <!--<MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>-->
+                <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional">
+                    <MenuItem x:Name="btn_stockDisponible" Header="Stock disponible" Click="btn_menu_stockDisponible_Click"/>
+                </MenuItem>
             </MenuItem>
-            
+
         </Menu>
         <Frame NavigationUIVisibility="Hidden" x:Name="frameAdm" Content="" HorizontalAlignment="Stretch" Height="428" VerticalAlignment="Top" Margin="0,18,-14,0" Grid.ColumnSpan="6"/>
 

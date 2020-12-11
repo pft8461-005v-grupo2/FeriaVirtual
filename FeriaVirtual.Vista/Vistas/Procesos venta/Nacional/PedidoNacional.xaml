@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FeriaVirtual.Vista.Vistas.Procesos_venta.Nacional"
         mc:Ignorable="d"
-        Title="PedidoNacional" Height="450" Width="800">
+        Title="PedidoNacional" Height="450" Width="791.276">
     <Grid>
         <Grid.ColumnDefinitions>
 

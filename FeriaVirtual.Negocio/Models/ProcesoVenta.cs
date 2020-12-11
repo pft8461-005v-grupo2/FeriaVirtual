@@ -12,7 +12,7 @@ namespace FeriaVirtual.Negocio.Models
         public int? solicitud_compra_id { get; set; }
         public int? subasta_id { get; set; }
         public int? etapa { get; set; }
-        public String fechacreacion { get; set; }
+        public string fechacreacion { get; set; }
         public int? clienteaceptaacuerdo { get; set; }
         public int? precioventatotal { get; set; }
         public int? preciocostototal { get; set; }
