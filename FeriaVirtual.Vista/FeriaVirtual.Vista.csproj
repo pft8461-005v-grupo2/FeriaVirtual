@@ -124,6 +124,9 @@
     <Compile Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml.cs">
       <DependentUpon>ProcesoVentaNacional.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Procesos venta\Nacional\VistaStockDisponible.xaml.cs">
+      <DependentUpon>VistaStockDisponible.xaml</DependentUpon>
+    </Compile>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -227,6 +230,10 @@
     <Page Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vistas\Procesos venta\Nacional\VistaStockDisponible.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

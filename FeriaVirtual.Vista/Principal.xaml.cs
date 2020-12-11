@@ -87,5 +87,10 @@ namespace FeriaVirtual.Vista
         {
             frameAdm.Content = new Vistas.Procesos_venta.Internacional.VentaDespachar();
         }
+
+        private void btn_menu_stockDisponible_Click(object sender, RoutedEventArgs e)
+        {
+            frameAdm.Content = new Vistas.Procesos_venta.Nacional.VistaStockDisponible();
+        }
     }
 }
