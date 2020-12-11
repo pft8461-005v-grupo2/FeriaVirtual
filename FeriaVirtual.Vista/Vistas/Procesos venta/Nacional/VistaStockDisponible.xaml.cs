@@ -62,7 +62,9 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Nacional
 
         private void Btn_generarProceso_Click(object sender, RoutedEventArgs e)
         {
-
+            DataRowView dataRowView = data_stock_disponible.SelectedItem as DataRowView;
+            DetalleStockDisponible detalleStockDisponible = new DetalleStockDisponible(dataRowView, this);
+            detalleStockDisponible.Show();
         }
     }
 }

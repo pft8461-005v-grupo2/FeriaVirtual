@@ -8,8 +8,8 @@ namespace FeriaVirtual.Negocio.Constants
 {
     class Endpoints
     {
-        //public const string SERVER = "http://localhost:8090/api";
-        public const string SERVER = "http://192.168.100.4:8080/api";
+        public const string SERVER = "http://localhost:8090/api";
+        //public const string SERVER = "http://192.168.100.4:8080/api";
 
         // Consultar
         public const string usuario_consultar = "/usuario/consultar";
@@ -20,6 +20,8 @@ namespace FeriaVirtual.Negocio.Constants
         public const string procesoVenta_consultar = "/proceso-venta/consultar";
         public const string producto_consultar = "/producto/consultar";
         public const string subasta_consultar = "/subasta/consultar";
+        public const string stock_disponible_consultar = "/consulta-stock-disponible";
+        public const string ingreso_consultar = "/ingreso/consultar";
 
         // Crear
         public const string usuario_crear = "/usuario/crear";
@@ -38,6 +40,7 @@ namespace FeriaVirtual.Negocio.Constants
         // Gestiones
         public const string procesoVenta_iniciar = "/proceso-internacional/iniciar-proceso";
         public const string procesoSubasta_inter_iniciar = "/proceso-internacional/iniciar-subasta";
-        public const string stock_disponible_iniciar = "/consulta-stock-disponible";
+        public const string procesoNacional_iniciar = " /api/proceso-nacional/iniciar-proceso";
+
     }
 }
