@@ -46,5 +46,22 @@ namespace FeriaVirtual.Negocio.Services
 
             return lista_ingreso_response != null ? lista_ingreso_response : new List<Ingreso>(); ;
         }
+
+        public static List<Ingreso> consultarIngreso(Ingreso ingreso)
+        {
+            RestClient client = new RestClient(Endpoints.SERVER);
+            RestRequest request = new RestRequest(Endpoints.ingreso_consultar, Method.POST);
+
+
+            string data = JsonConvert.SerializeObject(ingreso);
+            request.AddJsonBody(data);
+
+            IRestResponse response = client.Execute(request);
+
+            List<Ingreso> lista_ingreso_response = JsonConvert.DeserializeObject<List<Ingreso>>(response.Content);
+
+
+            return lista_ingreso_response != null ? lista_ingreso_response : new List<Ingreso>(); ;
+        }
     }
 }

@@ -118,14 +118,14 @@
     <Compile Include="Vistas\Procesos venta\Internacional\VentaDespachar.xaml.cs">
       <DependentUpon>VentaDespachar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Procesos venta\Nacional\DetalleSolicitudesCompra.xaml.cs">
+      <DependentUpon>DetalleSolicitudesCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Procesos venta\Nacional\DetalleStockDisponible.xaml.cs">
       <DependentUpon>DetalleStockDisponible.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Procesos venta\Nacional\PedidoNacional.xaml.cs">
-      <DependentUpon>PedidoNacional.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml.cs">
-      <DependentUpon>ProcesoVentaNacional.xaml</DependentUpon>
+    <Compile Include="Vistas\Procesos venta\Nacional\SolicitudesCompra.xaml.cs">
+      <DependentUpon>SolicitudesCompra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Procesos venta\Nacional\VistaStockDisponible.xaml.cs">
       <DependentUpon>VistaStockDisponible.xaml</DependentUpon>
@@ -226,17 +226,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Vistas\Procesos venta\Nacional\DetalleSolicitudesCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\Procesos venta\Nacional\DetalleStockDisponible.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Vistas\Procesos venta\Nacional\PedidoNacional.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Vistas\Procesos venta\Nacional\SolicitudesCompra.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Vistas\Procesos venta\Nacional\ProcesoVentaNacional.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Vistas\Procesos venta\Nacional\VistaStockDisponible.xaml">
       <SubType>Designer</SubType>
