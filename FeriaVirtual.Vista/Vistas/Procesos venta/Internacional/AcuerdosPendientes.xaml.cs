@@ -57,33 +57,34 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
-                int? cliente_id = (from sol in listaSolicitudCompra
-                                           where sol.id==lista_obtenida[i].solicitud_compra_id
-                                           select sol.cliente_id ).First();
+                if (lista_obtenida[i].solicitud_compra_id != null)
+                {
+                    int? cliente_id = (from sol in listaSolicitudCompra
+                                       where sol.id == lista_obtenida[i].solicitud_compra_id
+                                       select sol.cliente_id).First();
 
-                Cliente cliente = new Cliente();
-                cliente.id = cliente_id;
+                    Cliente cliente = new Cliente();
+                    cliente.id = cliente_id;
 
-                List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
+                    List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
 
-                cliente = (
-                     from cli in listaCliente
+                    cliente = (
+                         from cli in listaCliente
 
-                     select cli
-                  ).First();
+                         select cli
+                      ).First();
+
+                    Solicitud_compra solicitudCompraABuscar = new Solicitud_compra();
+                    solicitudCompraABuscar.id = lista_obtenida[i].solicitud_compra_id;
+                    List<Solicitud_compra> lista_solicitudCompra = Solicitud_compraService.solicitud_Compras(solicitudCompraABuscar);
+
+                    Solicitud_compra solicitudCompraEncontrado = (
+                        from sc in lista_solicitudCompra
+                        select sc
+                        ).First();
 
 
-                Solicitud_compra solicitudCompraABuscar = new Solicitud_compra();
-                solicitudCompraABuscar.id = lista_obtenida[i].solicitud_compra_id;
-                List<Solicitud_compra> lista_solicitudCompra = Solicitud_compraService.solicitud_Compras(solicitudCompraABuscar);
-
-                Solicitud_compra solicitudCompraEncontrado = (
-                    from sc in lista_solicitudCompra
-                    select sc
-                    ).First();
-
-
-                if (lista_obtenida[i].etapa == 2)
+                    if (lista_obtenida[i].etapa == 2)
                     {
 
                         tabla_con_datos.Rows.Add(
@@ -104,7 +105,7 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
                         );
                     };
-
+                }
 
                 data_AcuerdosPendientes.ItemsSource = tabla_con_datos.AsDataView();
             }

@@ -22,6 +22,7 @@ namespace FeriaVirtual.Negocio.Constants
         public const string subasta_consultar = "/subasta/consultar";
         public const string stock_disponible_consultar = "/consulta-stock-disponible";
         public const string ingreso_consultar = "/ingreso/consultar";
+        public const string procesoVentaIngreso_consultar = "/proceso-venta-ingreso/consultar";
 
         // Crear
         public const string usuario_crear = "/usuario/crear";

@@ -41,11 +41,11 @@ namespace FeriaVirtual.Vista
         }
 
 
-        private void btn_menu_ventanacional_Click(object sender, RoutedEventArgs e)
-        {
-            deshabilitar_textos_principales();
-             frameAdm.Content = new Vistas.Procesos_venta.Nacional.ProcesoVentaNacional();
-        }
+        //private void btn_menu_ventanacional_Click(object sender, RoutedEventArgs e)
+        //{
+        //    deshabilitar_textos_principales();
+        //     frameAdm.Content = new Vistas.Procesos_venta.Nacional.ProcesoVentaNacional();
+        //}
 
 
         private void btn_menu_cliente_Click(object sender, RoutedEventArgs e)
@@ -109,5 +109,10 @@ namespace FeriaVirtual.Vista
             imagen_principal.Visibility = Visibility.Hidden;
         }
 
+        private void btn_menu_solicitudCompra_Click(object sender, RoutedEventArgs e)
+        {
+            deshabilitar_textos_principales();
+            frameAdm.Content = new Vistas.Procesos_venta.Nacional.SolicitudesCompra();
+        }
     }
 }
