@@ -51,6 +51,7 @@
                 <!--<MenuItem x:Name="btn_menu_ventanacional" Header="Nacional" Click="btn_menu_ventanacional_Click"/>-->
                 <MenuItem x:Name="btn_menu_ventanacional" Header="Nacional">
                     <MenuItem x:Name="btn_stockDisponible" Header="Stock disponible" Click="btn_menu_stockDisponible_Click"/>
+                    <MenuItem x:Name="btn_solicitudesCompra" Header="Solicitudes de compra" Click="btn_menu_solicitudCompra_Click"/>
                 </MenuItem>
             </MenuItem>
 

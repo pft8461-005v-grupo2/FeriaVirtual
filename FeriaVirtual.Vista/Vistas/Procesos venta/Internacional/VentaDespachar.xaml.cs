@@ -53,52 +53,57 @@ namespace FeriaVirtual.Vista.Vistas.Procesos_venta.Internacional
 
             for (int i = 0; i < lista_obtenida.Count; i++)
             {
-                int? cliente_id = (from sol in listaSolicitudCompra
-                                   where sol.id == lista_obtenida[i].solicitud_compra_id
-                                   select sol.cliente_id).First();
-
-                Cliente cliente = new Cliente();
-                cliente.id = cliente_id;
-
-                List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
-
-                cliente = (
-                     from cli in listaCliente
-
-                     select cli
-                  ).First();
-
-                Solicitud_compra solicitudCompraABuscar = new Solicitud_compra();
-                solicitudCompraABuscar.id = lista_obtenida[i].solicitud_compra_id;
-                List<Solicitud_compra> lista_solicitudCompra = Solicitud_compraService.solicitud_Compras(solicitudCompraABuscar);
-
-                Solicitud_compra solicitudCompraEncontrado = (
-                    from sc in lista_solicitudCompra
-                    select sc
-                    ).First();
-
-                if (lista_obtenida[i].etapa == 7)
+                if (lista_obtenida[i].solicitud_compra_id != null)
                 {
 
-                    tabla_con_datos.Rows.Add(
+                    int? cliente_id = (from sol in listaSolicitudCompra
+                                       where sol.id == lista_obtenida[i].solicitud_compra_id
+                                       select sol.cliente_id).First();
 
-                    lista_obtenida[i].id,
-                    cliente.identificador,
-                    cliente.razonSocial,
-                    solicitudCompraEncontrado.producto,
-                    lista_obtenida[i].solicitud_compra_id,
-                    lista_obtenida[i].subasta_id,
-                    lista_obtenida[i].etapa,
-                    lista_obtenida[i].fechacreacion,
-                    lista_obtenida[i].clienteaceptaacuerdo,
-                    lista_obtenida[i].precioventatotal,
-                    lista_obtenida[i].preciocostototal
+                    Cliente cliente = new Cliente();
+                    cliente.id = cliente_id;
+
+                    List<Cliente> listaCliente = ClienteService.consultarCliente(cliente);
+
+                    cliente = (
+                         from cli in listaCliente
+
+                         select cli
+                      ).First();
+
+                    Solicitud_compra solicitudCompraABuscar = new Solicitud_compra();
+                    solicitudCompraABuscar.id = lista_obtenida[i].solicitud_compra_id;
+                    List<Solicitud_compra> lista_solicitudCompra = Solicitud_compraService.solicitud_Compras(solicitudCompraABuscar);
+
+                    Solicitud_compra solicitudCompraEncontrado = (
+                        from sc in lista_solicitudCompra
+                        select sc
+                        ).First();
+
+                    if (lista_obtenida[i].etapa == 7)
+                    {
+
+                        tabla_con_datos.Rows.Add(
+
+                        lista_obtenida[i].id,
+                        cliente.identificador,
+                        cliente.razonSocial,
+                        solicitudCompraEncontrado.producto,
+                        lista_obtenida[i].solicitud_compra_id,
+                        lista_obtenida[i].subasta_id,
+                        lista_obtenida[i].etapa,
+                        lista_obtenida[i].fechacreacion,
+                        lista_obtenida[i].clienteaceptaacuerdo,
+                        lista_obtenida[i].precioventatotal,
+                        lista_obtenida[i].preciocostototal
 
 
-                    );
-                };
+                        );
+                    };
 
-                data_VentaDespacho.ItemsSource = tabla_con_datos.AsDataView();
+                }
+                    data_VentaDespacho.ItemsSource = tabla_con_datos.AsDataView();
+                
             }
 
         }
